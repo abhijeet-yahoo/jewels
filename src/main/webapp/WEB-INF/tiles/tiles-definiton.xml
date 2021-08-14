@@ -1,0 +1,5147 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+<tiles-definitions>
+
+	<definition name="container"
+		template="/WEB-INF/layout/mainLayout.jsp">
+		<put-attribute name="footer"
+			value="/WEB-INF/layout/footer.jsp" />
+	</definition>
+
+	<definition name="index" extends="container">
+		<put-attribute name="title" value="Jewelplus" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/index.jsp" />
+		<put-attribute name="view" value="index" />
+	</definition>
+
+	<!-- Login -->
+	<definition name="login" extends="container">
+		<put-attribute name="title" value="Jewelplus - Login" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/secure/login.jsp" />
+		<put-attribute name="view" value="login" />
+	</definition>
+
+	<!-- LoginDefault -->
+	<definition name="loginDefault" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LoginDefault" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/secure/loginDefault.jsp" />
+		<put-attribute name="view" value="loginDefault" />
+	</definition>
+
+	<!-- SecurityPage -->
+	<definition name="securityValidation" extends="container">
+		<put-attribute name="title" value="Validation" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/secure/securityValidation.jsp" />
+		<put-attribute name="view" value="securityValidation" />
+	</definition>
+
+	<!-- AuthenticationFailed -->
+	<definition name="loginFailedSession" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - loginFailedSession" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/secure/loginFailedSession.jsp" />
+		<put-attribute name="view" value="loginFailedSession" />
+	</definition>
+
+
+	<!-- lossBook -->
+	<definition name="lossBook" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loss Book" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/lossBook.jsp" />
+		<put-attribute name="view" value="lossBook" />
+	</definition>
+
+	<!-- StoneConversion -->
+	<definition name="stoneConversion" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Conversion" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneConversion.jsp" />
+		<put-attribute name="view" value="stoneConversion" />
+	</definition>
+
+
+
+
+
+
+	<!-- User -->
+	<definition name="users" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - User Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/users.jsp" />
+		<put-attribute name="view" value="users" />
+	</definition>
+
+	<definition name="user/register" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - User Registration" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/userRegister.jsp" />
+		<put-attribute name="view" value="register" />
+	</definition>
+
+
+	<!-- role mast -->
+	<definition name="roleMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Role Mast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/roleMast.jsp" />
+		<put-attribute name="view" value="roleMast" />
+	</definition>
+
+
+	<definition name="roleMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Role Mast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/addRoleMast.jsp" />
+		<put-attribute name="view" value="aeRoleMast" />
+	</definition>
+
+
+	<!-- Role Rights -->
+	<definition name="roleRights" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Role Rights" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/roleRights.jsp" />
+		<put-attribute name="view" value="roleRights" />
+	</definition>
+
+
+	<!-- User Role -->
+	<definition name="userRole" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - User Role" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/userRole.jsp" />
+		<put-attribute name="view" value="userRole" />
+	</definition>
+
+
+	<!-- User Login Security -->
+	<definition name="userLoginSecurity" extends="container">
+		<put-attribute name="title" value="User Login Security" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/userLoginSecurity.jsp" />
+		<put-attribute name="view" value="userLoginSecurity" />
+	</definition>
+
+
+	<!-- DataBackup -->
+	<definition name="dataBackup" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DataBackUp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/dataBackup.jsp" />
+		<put-attribute name="view" value="dataBackup" />
+	</definition>
+
+	<!-- Access Denied -->
+	<definition name="accesDenied" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - AccesDenied" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/accesDenied.jsp" />
+		<put-attribute name="view" value="userRole" />
+	</definition>
+
+
+	<!-- Collection -->
+	<definition name="collection" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Collection Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/collection.jsp" />
+		<put-attribute name="view" value="collection" />
+	</definition>
+
+	<definition name="collection/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Collection" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addCollection.jsp" />
+		<put-attribute name="view" value="aeCollection" />
+	</definition>
+
+	<!-- Category -->
+	<definition name="category" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Category Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/category.jsp" />
+		<put-attribute name="view" value="category" />
+	</definition>
+
+	<definition name="category/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Category" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addCategory.jsp" />
+		<put-attribute name="view" value="aeCategory" />
+	</definition>
+
+	<!-- Color -->
+	<definition name="color" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Color Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/color.jsp" />
+		<put-attribute name="view" value="color" />
+	</definition>
+
+	<definition name="color/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Color" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addColor.jsp" />
+		<put-attribute name="view" value="aeColor" />
+	</definition>
+
+
+	<!-- Concept -->
+	<definition name="concept" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Concept Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/concept.jsp" />
+		<put-attribute name="view" value="concept" />
+	</definition>
+
+	<definition name="concept/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Concept" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addConcept.jsp" />
+		<put-attribute name="view" value="aeConcept" />
+	</definition>
+
+	<!-- MulticomponentAddition -->
+	<definition name="multiComponentAddition"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - multiComponentAddition Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/multiComponentAddition.jsp" />
+		<put-attribute name="view"
+			value="multiComponentAddition" />
+	</definition>
+
+	<!-- MulticomponentDeduction -->
+	<definition name="multiComponentDeduction"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - multiComponentDeduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/multiComponentDeduction.jsp" />
+		<put-attribute name="view"
+			value="multiComponentDeduction" />
+	</definition>
+
+
+
+	<!-- Component -->
+	<definition name="component" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Component Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/component.jsp" />
+		<put-attribute name="view" value="component" />
+	</definition>
+
+
+	<!-- Client Wastage -->
+	<definition name="clientWastage" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ClientWastage Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/clientWastage.jsp" />
+		<put-attribute name="view" value="clientWastage" />
+	</definition>
+
+	<definition name="clientWastage/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ClientWastage" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addClientWastage.jsp" />
+		<put-attribute name="view" value="aeClientWastage" />
+	</definition>
+
+
+	<!-- Look up -->
+	<definition name="lookUpMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Lookup Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/lookUpMast.jsp" />
+		<put-attribute name="view" value="lookUpMast" />
+	</definition>
+
+	<definition name="lookUpMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LookUpMast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLookUpMast.jsp" />
+		<put-attribute name="view" value="aeLookUpMast" />
+	</definition>
+
+
+	<definition name="component/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Component" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addComponent.jsp" />
+		<put-attribute name="view" value="aeComponent" />
+	</definition>
+
+	<!-- CompInwardMt -->
+	<definition name="compInwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompInwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/compInwardMt.jsp" />
+		<put-attribute name="view" value="compInwardMt" />
+	</definition>
+
+	<definition name="compInwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompInwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCompInwardMt.jsp" />
+		<put-attribute name="view" value="aeCompInwardMt" />
+	</definition>
+
+	<!-- CompInwardDt -->
+	<definition name="compInwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompInwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/compInwardDt.jsp" />
+		<put-attribute name="view" value="compInwardDt" />
+	</definition>
+
+	<definition name="compInwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCompInwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CompInwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCompInwardDt.jsp" />
+		<put-attribute name="view" value="aeCompInwardDt" />
+	</definition>
+
+	<!-- CompOutwardMt -->
+	<definition name="compOutwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompOutwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/compOutwardMt.jsp" />
+		<put-attribute name="view" value="compOutwardMt" />
+	</definition>
+
+	<definition name="compOutwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompOutwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCompOutwardMt.jsp" />
+		<put-attribute name="view" value="aeCompOutwardMt" />
+	</definition>
+
+	<!-- CompOutwardDt -->
+	<definition name="compOutwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CompOutwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/compOutwardDt.jsp" />
+		<put-attribute name="view" value="compOutwardDt" />
+	</definition>
+
+	<definition name="compOutwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCompOutwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CompOutwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCompOutwardDt.jsp" />
+		<put-attribute name="view" value="aeCompOutwardDt" />
+	</definition>
+
+	<!-- CastingMt -->
+	<definition name="castingMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CastingMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/castingMt.jsp" />
+		<put-attribute name="view" value="castingMt" />
+	</definition>
+
+	<definition name="castingMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CastingMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCastingMt.jsp" />
+		<put-attribute name="view" value="aeCastingMt" />
+	</definition>
+
+	<!-- CastingDt -->
+	<definition name="castingDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CastingDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/castingDt.jsp" />
+		<put-attribute name="view" value="castingDt" />
+	</definition>
+
+	<definition name="castingDt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CastingDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCastingDt.jsp" />
+		<put-attribute name="view" value="aeCastingDt" />
+	</definition>
+
+
+	<definition name="meltingPickUp/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingPickUp" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/meltingPickup.jsp" />
+		<put-attribute name="view" value="aeMeltingPickUp" />
+	</definition>
+
+
+
+	<!-- FindingRate Mast -->
+	<definition name="findingRateMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FindingRateMast Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/findingRateMast.jsp" />
+		<put-attribute name="view" value="findingRateMast" />
+	</definition>
+
+	<definition name="findingRateMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FindingRateMast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addFindingRateMast.jsp" />
+		<put-attribute name="view" value="aeFindingRateMast" />
+	</definition>
+
+	<definition name="uploadExcelFindingRate"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FindingRateMast Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/findingRateExcelUpload.jsp" />
+		<put-attribute name="view" value="findingRateMast" />
+	</definition>
+
+	<definition name="findingRateFileUploaded"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FindingRateMast Excel Upload" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/findingRateExcelUpload.jsp" />
+		<put-attribute name="view" value="findingRateMast" />
+	</definition>
+
+
+	<!-- Handling Mast -->
+	<definition name="handlingMaster" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - HandlingMaster Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/handlingMaster.jsp" />
+		<put-attribute name="view" value="handlingMaster" />
+	</definition>
+
+	<definition name="handlingMaster/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - HandlingMaster" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addHandlingMaster.jsp" />
+		<put-attribute name="view" value="aeHandlingMaster" />
+	</definition>
+
+
+
+	<!-- LabourCharge -->
+	<definition name="labourCharge" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourCharge Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/labourCharge.jsp" />
+		<put-attribute name="view" value="labourCharge" />
+	</definition>
+
+	<definition name="labourCharge/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourCharge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLabourCharge.jsp" />
+		<put-attribute name="view" value="aeLabourCharge" />
+	</definition>
+
+	<definition name="uploadExcelLabour" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourCharge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/labourChargeExcelUpload.jsp" />
+		<put-attribute name="view" value="aeLabourCharge" />
+	</definition>
+
+	<definition name="labourFileUploaded" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourCharge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/labourChargeExcelUpload.jsp" />
+		<put-attribute name="view" value="aeLabourCharge" />
+	</definition>
+
+	<definition name="uploadExcelOrder" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderExcelUpload.jsp" />
+		<put-attribute name="view" value="aeOrderExcel" />
+	</definition>
+	
+	<definition name="orderExcelFileUploaded"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderExcelUpload.jsp" />
+		<put-attribute name="view" value="aeOrderExcel" />
+	</definition>
+
+		<definition name="uploadExcelDesign" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designExcelUpload.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+
+	<definition name="designExcelFileUploaded"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designExcelUpload.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+
+
+	<!-- SettingCharge -->
+	<definition name="settingCharge" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - SettingCharge Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/settingCharge.jsp" />
+		<put-attribute name="view" value="settingCharge" />
+	</definition>
+
+	<definition name="settingCharge/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - SettingCharge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSettingCharge.jsp" />
+		<put-attribute name="view" value="aeSettingCharge" />
+	</definition>
+
+	<definition name="uploadExcelSetting" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - setting charge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/settingChargeExcelUpload.jsp" />
+		<put-attribute name="view" value="aeSettingCharge" />
+	</definition>
+
+
+	<definition name="settingChargeFileUploaded"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - settingCharge" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/settingChargeExcelUpload.jsp" />
+		<put-attribute name="view" value="aeSettingCharge" />
+	</definition>
+
+
+
+	<!-- Stone Rate Mast -->
+	<definition name="stoneRateMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Rate Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/stoneRateMast.jsp" />
+		<put-attribute name="view" value="stoneChart" />
+	</definition>
+
+	<definition name="stoneRateMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Rate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addStoneRateMast.jsp" />
+		<put-attribute name="view" value="aeStoneChart" />
+	</definition>
+
+	<definition name="uploadExcelstoneRateMast"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Rate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/stoneRateMastExcelUpload.jsp" />
+		<put-attribute name="view" value="aeStoneRate" />
+	</definition>
+
+
+	<definition name="stoneRateMastFileUploaded"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Rate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/stoneRateMastExcelUpload.jsp" />
+		<put-attribute name="view" value="aeStoneRateMast" />
+	</definition>
+
+
+	<!-- ComponentAddition -->
+	<definition name="componentAddition" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ComponentAddition Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentAddition.jsp" />
+		<put-attribute name="view" value="componentAddition" />
+	</definition>
+
+	<!-- ComponentDeduction -->
+	<definition name="componentDeduction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ComponentDeduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentDeduction.jsp" />
+		<put-attribute name="view" value="componentDeduction" />
+	</definition>
+
+	<!-- componentDeductionDetails -->
+	<definition name="componentDeductionDetails"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Component Deduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentDeductionDetails.jsp" />
+		<put-attribute name="view" value="componentDeduction" />
+	</definition>
+
+
+	<!-- ComponentTransaction -->
+	<definition name="componentTransaction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ComponentTransaction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentTransaction.jsp" />
+		<put-attribute name="view" value="componentTransaction" />
+	</definition>
+
+
+	<!-- CostingMt -->
+	<definition name="costingMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingMt.jsp" />
+		<put-attribute name="view" value="costingMt" />
+	</definition>
+
+	<definition name="costingMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingTabs.jsp" />
+		<put-attribute name="view" value="aeCostingMt" />
+	</definition>
+
+	<definition name="costingMtTransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingMtTransfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingMtTransfer.jsp" />
+		<put-attribute name="view" value="costingMtTransfer" />
+	</definition>
+
+	<definition name="costCompFinding" extends="container">
+		<put-attribute name="title" value="Finding" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costCompFinding.jsp" />
+		<put-attribute name="view" value="costCompFinding" />
+	</definition>
+
+	<definition name="costingTransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Costing Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingTransfer.jsp" />
+		<put-attribute name="view" value="costingTransfer" />
+	</definition>
+
+
+	<!-- costing Report -->
+	<definition name="costing/reports" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Costing Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingReports.jsp" />
+		<put-attribute name="view" value="costingReports" />
+	</definition>
+
+
+	<!-- CostingDt -->
+	<definition name="costingDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostingDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostingDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostingDt.jsp" />
+		<put-attribute name="view" value="aeCostingDt" />
+	</definition>
+
+	<!-- CostStnDt -->
+	<definition name="costStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostStnDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostStnDt.jsp" />
+		<put-attribute name="view" value="aeCostStnDt" />
+	</definition>
+
+
+	<!-- CostCompDt -->
+	<definition name="costCompDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostCompDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostCompDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostCompDt.jsp" />
+		<put-attribute name="view" value="aeCostCompDt" />
+	</definition>
+
+	<!-- CostLabDt -->
+	<definition name="costLabDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostLabDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostLabDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostLabDt.jsp" />
+		<put-attribute name="view" value="aeCostLabDt" />
+	</definition>
+
+
+	<definition name="changeLabour"
+		template="/WEB-INF/jsp/manufacturing/transactions/changeLabour.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Change Labour Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/changeLabour.jsp" />
+		<put-attribute name="view" value="aeChangeLabour" />
+	</definition>
+
+
+
+	<!-- costingTrfExcel -->
+	<definition name="costingTrfExcel" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - costingTrfExcel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingTrfExcel.jsp" />
+		<put-attribute name="view" value="costingTrfExcel" />
+	</definition>
+
+
+
+	<!-- CostingJobMt -->
+	<definition name="costingJobMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingJobMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingJobMt.jsp" />
+		<put-attribute name="view" value="costingJobMt" />
+	</definition>
+
+
+
+
+	<definition name="costingJobMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingJobMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingJobTabs.jsp" />
+		<put-attribute name="view" value="aeCostingJobMt" />
+	</definition>
+
+
+	<definition name="costingJobMtTransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingJobMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingJobMtTransfer.jsp" />
+		<put-attribute name="view"
+			value="aeCostingJobMtTransfer" />
+	</definition>
+
+	<definition name="costJobCompFinding" extends="container">
+		<put-attribute name="title" value="Finding" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costJobCompFinding.jsp" />
+		<put-attribute name="view" value="costJobCompFinding" />
+	</definition>
+
+
+	<!-- CostingJobDt -->
+	<definition name="costingJobDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostingJobDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostingJobDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostingJobDt.jsp" />
+		<put-attribute name="view" value="aeCostingJobDt" />
+	</definition>
+
+	<!-- CostJobStnDt -->
+	<definition name="costJobStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostJobStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostJobStnDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostJobStnDt.jsp" />
+		<put-attribute name="view" value="aeCostJobStnDt" />
+	</definition>
+
+
+	<!-- CostJobCompDt -->
+	<definition name="costJobCompDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostJobCompDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostJobCompDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostJobCompDt.jsp" />
+		<put-attribute name="view" value="aeCostJobCompDt" />
+	</definition>
+
+	<!-- CostJobLabDt -->
+	<definition name="costJobLabDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostJobLabDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostJobLabDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostJobLabDt.jsp" />
+		<put-attribute name="view" value="aeCostJobLabDt" />
+	</definition>
+
+
+	<!-- Department -->
+	<definition name="department" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Department Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/department.jsp" />
+		<put-attribute name="view" value="department" />
+	</definition>
+
+	<definition name="department/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Department" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDepartment.jsp" />
+		<put-attribute name="view" value="aeDepartment" />
+	</definition>
+
+	<!-- processMast -->
+	<definition name="processMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ProcessMast Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/processMast.jsp" />
+		<put-attribute name="view" value="processMast" />
+	</definition>
+
+	<definition name="processMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ProcessMast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addProcessMast.jsp" />
+		<put-attribute name="view" value="aeProcessMast" />
+	</definition>
+
+
+	<!-- DiamondChanging -->
+	<definition name="diamondChanging" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondChanging Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondChanging.jsp" />
+		<put-attribute name="view" value="diamondChanging" />
+	</definition>
+
+	<definition name="diamondChangingBreakup"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondChangingBreakup Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondChangingBreakup.jsp" />
+		<put-attribute name="view"
+			value="diamondChangingBreakup" />
+	</definition>
+
+	<definition name="diamondChangingNewBreakup"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - diamondChangingNewBreakup Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondChangingNewBreakup.jsp" />
+		<put-attribute name="view"
+			value="aediamondChangingNewBreakup" />
+	</definition>
+
+
+
+
+	<!-- Design Group -->
+	<definition name="designGroup" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DesignGroup Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designGroup.jsp" />
+		<put-attribute name="view" value="designGroup" />
+	</definition>
+
+	<definition name="designGroup/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DesignGroup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignGroup.jsp" />
+		<put-attribute name="view" value="aeDesignGroup" />
+	</definition>
+
+
+	<!-- DiamondRateChange -->
+	<definition name="diamondRateChange" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondRateChange" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondRateChange.jsp" />
+		<put-attribute name="view" value="diamondRateChange" />
+	</definition>
+
+	<!-- DiamondRateStockChange -->
+	<definition name="diamondRateStockChange"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondRateStockChange" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondRateStockChange.jsp" />
+		<put-attribute name="view"
+			value="diamondRateStockChange" />
+	</definition>
+
+	<!-- stoneAdjustment -->
+	<definition name="stoneAdjustment" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - stoneAdjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneAdjustment.jsp" />
+		<put-attribute name="view" value="stoneAdjustment" />
+	</definition>
+
+
+
+
+
+	<!-- DustMt -->
+	<definition name="dustMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DustMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/dustMt.jsp" />
+		<put-attribute name="view" value="dustMt" />
+	</definition>
+
+	<definition name="dustMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - DustMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addDustMt.jsp" />
+		<put-attribute name="view" value="aeDustMt" />
+	</definition>
+
+
+	<!-- DustDt -->
+	<definition name="dustDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DustDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/dustDt.jsp" />
+		<put-attribute name="view" value="dustDt" />
+	</definition>
+
+	<definition name="dustDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addDustDt.jsp">
+		<put-attribute name="title" value="Jewelplus - DustDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addDustDt.jsp" />
+		<put-attribute name="view" value="aeDustDt" />
+	</definition>
+
+
+	<!-- DustRecDt -->
+	<definition name="dustRecDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DustRecDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/dustRecDt.jsp" />
+		<put-attribute name="view" value="dustRecDt" />
+	</definition>
+
+	<definition name="dustRecDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addDustRecDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - DustRecDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addDustRecDt.jsp" />
+		<put-attribute name="view" value="aeDustRecDt" />
+	</definition>
+
+
+	<!-- DesignMoldType -->
+	<definition name="designMoldType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DesignMoldType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designMoldType.jsp" />
+		<put-attribute name="view" value="designMoldType" />
+	</definition>
+
+	<definition name="designMoldType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DesignMoldType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignMoldType.jsp" />
+		<put-attribute name="view" value="aeDesignMoldType" />
+	</definition>
+
+	<!-- DesignMold -->
+	<definition name="designMold" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DesignMold Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designMold.jsp" />
+		<put-attribute name="view" value="designMold" />
+	</definition>
+
+	<definition name="designMold/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addDesignMold.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - DesignMold" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignMold.jsp" />
+		<put-attribute name="view" value="aeDesignMold" />
+	</definition>
+
+
+	<!-- Employee -->
+	<definition name="employee" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Employee Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/employee.jsp" />
+		<put-attribute name="view" value="employee" />
+	</definition>
+
+	<definition name="employee/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Employee" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addEmployee.jsp" />
+		<put-attribute name="view" value="aeEmployee" />
+	</definition>
+
+	<!-- EmailConcept -->
+
+	<definition name="emailConcept" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmailConcept Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/emailConcept.jsp" />
+		<put-attribute name="view" value="emailConcept" />
+	</definition>
+
+	<definition name="emailConcept/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmailConcept" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/emailConceptTabs.jsp" />
+		<put-attribute name="view" value="aeEmailConcept" />
+	</definition>
+
+
+
+	<definition name="emailConceptRpt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmailConcept Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/emailConceptFilter.jsp" />
+		<put-attribute name="view" value="emailConceptReport" />
+	</definition>
+
+
+	<!-- EmpPcsProduction -->
+	<definition name="empPcsProduction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmpPcsProduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/empPcsProduction.jsp" />
+		<put-attribute name="view" value="empPcsProduction" />
+	</definition>
+
+	<definition name="empPcsProduction/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addEmpPcsProduction.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - EmpPcsProduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addEmpPcsProduction.jsp" />
+		<put-attribute name="view" value="aeEmpPcsProduction" />
+	</definition>
+
+	<!-- EmpStoneProduction -->
+	<definition name="empStoneProduction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmpStoneProduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/empStoneProduction.jsp" />
+		<put-attribute name="view" value="empStoneProduction" />
+	</definition>
+
+	<definition name="empStoneProduction/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addEmpStoneProduction.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - EmpStoneProduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addEmpStoneProduction.jsp" />
+		<put-attribute name="view" value="aeEmpStoneProduction" />
+	</definition>
+
+
+	<!-- ExportClose -->
+	<definition name="exportClose" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Export-Close" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/exportClose.jsp" />
+		<put-attribute name="view" value="exportClose" />
+	</definition>
+
+
+	<!-- GeneralSearch -->
+	<definition name="generalSearch" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - GeneralSearch" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/generalSearch.jsp" />
+		<put-attribute name="view" value="generalSearch" />
+	</definition>
+
+	<!-- BagHistory -->
+
+	<definition name="fromBagSearch/bagHistory"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - BagHistory" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagHistory.jsp" />
+		<put-attribute name="view" value="bagHistory" />
+	</definition>
+
+
+
+	<definition name="bagHistory"
+		template="/WEB-INF/layout/blankPage.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - BagHistory" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagHistory.jsp" />
+		<put-attribute name="view" value="bagHistory" />
+	</definition>
+
+
+	<!-- InwardType -->
+	<definition name="inwardType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - InwardType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/inwardType.jsp" />
+		<put-attribute name="view" value="inwardType" />
+	</definition>
+
+	<definition name="inwardType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - InwardType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addInwardType.jsp" />
+		<put-attribute name="view" value="aeInwardType" />
+	</definition>
+
+	<!-- KtConversion -->
+	<!-- <definition name="ktConversion" extends="container"> <put-attribute 
+		name="title" value="Jewelplus - KtConversion Listing" /> <put-attribute name="body" 
+		value="/WEB-INF/jsp/manufacturing/transactions/ktConversion.jsp" /> <put-attribute 
+		name="view" value="ktConversion" /> </definition> <definition name="ktConversion/add" 
+		extends="container"> <put-attribute name="title" value="Jewelplus - KtConversion" 
+		/> <put-attribute name="body" value="/WEB-INF/jsp/manufacturing/transactions/addKtConversion.jsp" 
+		/> <put-attribute name="view" value="aeKtConversion" /> </definition> -->
+
+	<!-- new model based on ktConversion ====== (KTCONVERSIONMT) -->
+
+	<!-- KtConversionMt -->
+	<definition name="ktConversionMt" extends="container">
+		<put-attribute name="title"
+			value="KtConversionMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/ktConversionMt.jsp" />
+		<put-attribute name="view" value="ktConversionMt" />
+	</definition>
+
+	<definition name="ktConversionMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - KtConversionMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addKtConversionMt.jsp" />
+		<put-attribute name="view" value="aeKtConversionMt" />
+	</definition>
+
+	<definition name="ktConversionDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addKtConversionDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - KtConversionDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addKtConversionDt.jsp" />
+		<put-attribute name="view" value="aeKtConversionDt" />
+	</definition>
+
+
+	<!-- Labour Type -->
+	<definition name="labourType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/labourType.jsp" />
+		<put-attribute name="view" value="labourType" />
+	</definition>
+
+	<definition name="labourType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LabourType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLabourType.jsp" />
+		<put-attribute name="view" value="aeLabourType" />
+	</definition>
+
+
+
+
+
+	<!-- MetalInwardMt -->
+	<definition name="metalInwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalInwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalInwardMt.jsp" />
+		<put-attribute name="view" value="metalInwardMt" />
+	</definition>
+
+	<definition name="metalInwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalInwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalInwardMt.jsp" />
+		<put-attribute name="view" value="aeMetalInwardMt" />
+	</definition>
+
+
+
+	<!-- MetalInwardDt -->
+	<definition name="metalInwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalInwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalInwardDt.jsp" />
+		<put-attribute name="view" value="metalInwardDt" />
+	</definition>
+
+	<definition name="metalInwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMetalInwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - MetalInwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalInwardDt.jsp" />
+		<put-attribute name="view" value="aeMetalInwardDt" />
+	</definition>
+
+	<!-- MetalOutwardMt -->
+	<definition name="metalOutwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalOutwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalOutwardMt.jsp" />
+		<put-attribute name="view" value="metalOutwardMt" />
+	</definition>
+
+	<definition name="metalOutwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalOutwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalOutwardMt.jsp" />
+		<put-attribute name="view" value="aeMetalOutwardMt" />
+	</definition>
+
+	<!-- MetalOutwardDt -->
+	<definition name="metalOutwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalOutwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalOutwardDt.jsp" />
+		<put-attribute name="view" value="metalOutwardDt" />
+	</definition>
+
+	<definition name="metalOutwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMetalOutwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - MetalOutwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalOutwardDt.jsp" />
+		<put-attribute name="view" value="aeMetalOutwardDt" />
+	</definition>
+
+	<!-- Metal -->
+	<definition name="metal" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Metal Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/metal.jsp" />
+		<put-attribute name="view" value="metal" />
+	</definition>
+
+	<definition name="metal/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Metal" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addMetal.jsp" />
+		<put-attribute name="view" value="aeMetal" />
+	</definition>
+
+	<!-- MetalAddition -->
+	<definition name="metalAddition" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalAddition Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalAddition.jsp" />
+		<put-attribute name="view" value="metalAddition" />
+	</definition>
+
+	<!-- MetalDeduction -->
+	<definition name="metalDeduction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalDeduction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalDeduction.jsp" />
+		<put-attribute name="view" value="metalDeduction" />
+	</definition>
+
+	<!-- MeltingMt -->
+	<definition name="meltingMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/meltingMt.jsp" />
+		<put-attribute name="view" value="meltingMt" />
+	</definition>
+
+	<definition name="meltingMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMeltingMt.jsp" />
+		<put-attribute name="view" value="aeMeltingMt" />
+	</definition>
+
+
+	<!-- MeltingIssDt -->
+	<definition name="meltingIssDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingIssDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/meltingIssDt.jsp" />
+		<put-attribute name="view" value="meltingIssDt" />
+	</definition>
+
+	<definition name="meltingIssDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMeltingIssDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingIssDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMeltingIssDt.jsp" />
+		<put-attribute name="view" value="aeMeltingIssDt" />
+	</definition>
+
+	<!-- MeltingRecDt -->
+	<definition name="meltingRecDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingRecDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/meltingRecDt.jsp" />
+		<put-attribute name="view" value="meltingRecDt" />
+	</definition>
+
+	<definition name="meltingRecDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMeltingRecDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - MeltingRecDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMeltingRecDt.jsp" />
+		<put-attribute name="view" value="aeMeltingRecDt" />
+	</definition>
+
+	<!-- MetalTransaction -->
+	<definition name="metalTransaction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalTransaction Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalTransaction.jsp" />
+		<put-attribute name="view" value="metalTransaction" />
+	</definition>
+
+
+	<!-- MakingMt -->
+	<definition name="makingMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MakingMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/makingMt.jsp" />
+		<put-attribute name="view" value="makingMt" />
+	</definition>
+
+	<definition name="makingMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - MakingMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMakingMt.jsp" />
+		<put-attribute name="view" value="aeMakingMt" />
+	</definition>
+
+	<definition name="makingRecDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMakingRecDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - MakingRecDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMakingRecDt.jsp" />
+		<put-attribute name="view" value="aeMakingRecDt" />
+	</definition>
+
+
+	<!-- OrderType -->
+	<definition name="orderType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - OrderType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderType.jsp" />
+		<put-attribute name="view" value="orderType" />
+	</definition>
+
+	<definition name="orderType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - OrderType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderType.jsp" />
+		<put-attribute name="view" value="aeOrderType" />
+	</definition>
+
+
+	<!-- Party -->
+	<definition name="party" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Party Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/party.jsp" />
+		<put-attribute name="view" value="party" />
+	</definition>
+
+	<definition name="party/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Party" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addParty.jsp" />
+		<put-attribute name="view" value="aeParty" />
+	</definition>
+
+
+	<!--Client Reference -->
+	<definition name="clientRef" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Client Reference Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/clientRef.jsp" />
+		<put-attribute name="view" value="clientRef" />
+	</definition>
+
+	<!-- Product Size -->
+	<definition name="productSize" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Product Size Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/productSize.jsp" />
+		<put-attribute name="view" value="productSize" />
+	</definition>
+
+	<definition name="productSize/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Product Size" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addProductSize.jsp" />
+		<put-attribute name="view" value="aeProductSize" />
+	</definition>
+
+	<!-- ProdLabourType -->
+	<definition name="prodLabourType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ProdLabourType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/prodLabourType.jsp" />
+		<put-attribute name="view" value="prodLabourType" />
+	</definition>
+
+	<definition name="prodLabourType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ProdLabourType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addProdLabourType.jsp" />
+		<put-attribute name="view" value="aeProdLabourType" />
+	</definition>
+
+
+
+	<!-- PDC -->
+	<definition name="pdc" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Pdc Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdc.jsp" />
+		<put-attribute name="view" value="pdc" />
+	</definition>
+
+	<definition name="pdc/edit"
+		template="/WEB-INF/jsp/manufacturing/transactions/editPdc.jsp">
+		<put-attribute name="title" value="Jewelplus - PdcEdit" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/editPdc.jsp" />
+		<put-attribute name="view" value="pdcEdit" />
+	</definition>
+
+	<!-- PDC Set Opening -->
+	<definition name="PDCTranMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Pdc Set Opening Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdcTranMt.jsp" />
+		<put-attribute name="view" value="pdcTranMt" />
+	</definition>
+
+	<!-- PDC Process -->
+	<definition name="pdctransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Pdc Process" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdcTransfer.jsp" />
+		<put-attribute name="view" value="pdctransfer" />
+	</definition>
+
+	<!-- PDC Piece Prodcution -->
+	<definition name="empPdProduction" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Pdc Piece Production" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/empPdProduction.jsp" />
+		<put-attribute name="view" value="empPdProduction" />
+	</definition>
+
+	<definition name="empPdProduction/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addEmpPdProduction.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - EmpPdProduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addEmpPdProduction.jsp" />
+		<put-attribute name="view" value="empPdProduction" />
+	</definition>
+
+	<!-- PD Metal Addition -->
+
+	<definition name="pdMetalAddition" extends="container">
+		<put-attribute name="title" value="PD MetalAddition" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdMetalAddition.jsp" />
+		<put-attribute name="view" value="pdMetalAddition" />
+	</definition>
+
+
+	<!-- PD MetalDeduction -->
+	<definition name="pdMetalDeduction" extends="container">
+		<put-attribute name="title" value="PD MetalDeduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdMetalDeduction.jsp" />
+		<put-attribute name="view" value="pdMetalDeduction" />
+	</definition>
+
+
+	<!-- PD Search -->
+	<definition name="pdSearch" extends="container">
+		<put-attribute name="title" value="PD Search" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pdSearch.jsp" />
+		<put-attribute name="view" value="pdSearch" />
+	</definition>
+
+
+
+	<!-- Quality -->
+	<definition name="quality" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Quality Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/quality.jsp" />
+		<put-attribute name="view" value="quality" />
+	</definition>
+
+	<definition name="quality/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Quality" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addQuality.jsp" />
+		<put-attribute name="view" value="aeQuality" />
+	</definition>
+
+
+
+	<!-- Quotation -->
+	<definition name="quotMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - QuotMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/quotMt.jsp" />
+		<put-attribute name="view" value="quotMt" />
+	</definition>
+
+	<definition name="quotMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - QuotMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/quotTabs.jsp" />
+		<put-attribute name="view" value="aeQuotMt" />
+	</definition>
+
+
+	<!-- QuotDt -->
+	<definition name="quotDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotDt.jsp">
+		<put-attribute name="title" value="Jewelplus - QuotDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotDt.jsp" />
+		<put-attribute name="view" value="aeQuotDt" />
+	</definition>
+
+	<!-- QuotDtAddPage -->
+	<definition name="quotDt/setQuotDtAddPage"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotDt2.jsp">
+		<put-attribute name="title" value="Jewelplus - QuotDt2" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotDt2.jsp" />
+		<put-attribute name="view" value="aeQuotDt2" />
+	</definition>
+
+
+
+	<!-- Quot Metal -->
+	<definition name="quotMetal" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Quot Metal Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/quotMetal.jsp" />
+		<put-attribute name="view" value="quotMetal" />
+	</definition>
+
+	<definition name="quotMetal/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotMetal.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - QuotMetal" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotMetal.jsp" />
+		<put-attribute name="view" value="aeQuotMetal" />
+	</definition>
+
+
+
+
+	<!-- QuotStnDt -->
+	<definition name="quotStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - QuotStnDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotStnDt.jsp" />
+		<put-attribute name="view" value="aeQuotStnDt" />
+	</definition>
+
+
+	<!-- <definition name="quotStnDt/setQuotStnDtAddPage" template="/WEB-INF/jsp/manufacturing/transactions/addQuotStnDt.jsp"> 
+		<put-attribute name="title" value="Jewelplus - QuotStnDt2" /> <put-attribute 
+		name="body" value="/WEB-INF/jsp/manufacturing/transactions/addQuotStnDt.jsp" 
+		/> <put-attribute name="view" value="aeQuotStnD2t" /> </definition> -->
+
+
+	<!-- QuotCompDt -->
+	<definition name="quotCompDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotCompDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - QuotCompDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotCompDt.jsp" />
+		<put-attribute name="view" value="aeQuotCompDt" />
+	</definition>
+
+	<!-- QuotLabDt -->
+	<definition name="quotLabDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotLabDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - QuotLabDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotLabDt.jsp" />
+		<put-attribute name="view" value="aeQuotLabDt" />
+	</definition>
+
+	<!-- Quot Quality -->
+
+	<definition name="quotQuality" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Quot Quality Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/quotQuality.jsp" />
+		<put-attribute name="view" value="quotQuality" />
+	</definition>
+
+
+	<definition name="quotQuality/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addQuotQuality.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Quot Quality Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addQuotQuality.jsp" />
+		<put-attribute name="view" value="aeQuotQuality" />
+	</definition>
+
+	<!-- RejectionPiecesEntry -->
+	<definition name="rejectionPiecesEntry" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - RejectionPiecesEntry Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/rejectionPiecesEntry.jsp" />
+		<put-attribute name="view" value="rejectionPiecesEntry" />
+	</definition>
+
+
+	<!-- Sub Category -->
+	<definition name="subCategory" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sub Category Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/subCategory.jsp" />
+		<put-attribute name="view" value="subCategory" />
+	</definition>
+
+	<definition name="subCategory/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sub Category" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSubCategory.jsp" />
+		<put-attribute name="view" value="aeSubCategory" />
+	</definition>
+
+	<!-- Sub Concept -->
+	<definition name="subConcept" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sub Concept Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/subConcept.jsp" />
+		<put-attribute name="view" value="subConcept" />
+	</definition>
+
+	<definition name="subConcept/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sub Concept" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSubConcept.jsp" />
+		<put-attribute name="view" value="aeSubConcept" />
+	</definition>
+
+
+
+	<!-- Stone Chart -->
+	<definition name="stoneChart" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Chart Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/stoneChart.jsp" />
+		<put-attribute name="view" value="stoneChart" />
+	</definition>
+
+	<definition name="stoneChart/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Chart" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addStoneChart.jsp" />
+		<put-attribute name="view" value="aeStoneChart" />
+	</definition>
+
+	<!-- StoneInwardMt -->
+	<definition name="stoneInwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneInwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneInwardMt.jsp" />
+		<put-attribute name="view" value="stoneInwardMt" />
+	</definition>
+
+	<definition name="stoneInwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneInwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStoneInwardMt.jsp" />
+		<put-attribute name="view" value="aeStoneInwardMt" />
+	</definition>
+
+	<!-- StoneInwardDt -->
+	<definition name="stoneInwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneInwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneInwardDt.jsp" />
+		<put-attribute name="view" value="stoneInwardDt" />
+	</definition>
+
+	<definition name="stoneInwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addStoneInwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - StoneInwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStoneInwardDt.jsp" />
+		<put-attribute name="view" value="aeStoneInwardDt" />
+	</definition>
+
+
+	<!-- StoneOutwardMt -->
+	<definition name="stoneOutwardMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneOutwardMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneOutwardMt.jsp" />
+		<put-attribute name="view" value="stoneOutwardMt" />
+	</definition>
+
+	<definition name="stoneOutwardMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneOutwardMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStoneOutwardMt.jsp" />
+		<put-attribute name="view" value="aeStoneOutwardMt" />
+	</definition>
+
+
+	<!-- StoneOutwardDt -->
+	<definition name="stoneOutwardDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneOutwardDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneOutwardDt.jsp" />
+		<put-attribute name="view" value="stoneOutwardDt" />
+	</definition>
+
+	<definition name="stoneOutwardDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addStoneOutwardDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - StoneOutwardDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStoneOutwardDt.jsp" />
+		<put-attribute name="view" value="aeStoneOutwardDt" />
+	</definition>
+
+
+
+	<!-- Size Group -->
+	<definition name="sizeGroup" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Size Group Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/sizeGroup.jsp" />
+		<put-attribute name="view" value="sizeGroup" />
+	</definition>
+
+	<definition name="sizeGroup/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Size Group" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSizeGroup.jsp" />
+		<put-attribute name="view" value="aeSizeGroup" />
+	</definition>
+
+
+	<!-- Style Change -->
+	<definition name="styleChange" extends="container">
+		<put-attribute name="title" value="Style Change" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/styleChange.jsp" />
+		<put-attribute name="view" value="styleChange" />
+	</definition>
+
+
+
+	<!-- StnBflMt -->
+	<definition name="stnBflMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StnBflMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnBflMt.jsp" />
+		<put-attribute name="view" value="stnBflMt" />
+	</definition>
+
+	<definition name="stnBflMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - StnBflMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStnBflMt.jsp" />
+		<put-attribute name="view" value="aeStnBflMt" />
+	</definition>
+
+	<!-- StnBflDt -->
+	<definition name="stnBflMtNewBreakup" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StnBflMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnBflMtNewBreakup.jsp" />
+		<put-attribute name="view" value="stnBflMt" />
+	</definition>
+
+
+	<!-- TranMt -->
+	<definition name="tranMt" extends="container">
+		<put-attribute name="title" value="Jewelplus - TranMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/tranMt.jsp" />
+		<put-attribute name="view" value="aeTranMt" />
+	</definition>
+
+	<definition name="tranMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - TranMt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addTranMt.jsp" />
+		<put-attribute name="view" value="aeTranMt" />
+	</definition>
+
+	<!-- Transfer -->
+	<definition name="transfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Transfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/transfer.jsp" />
+		<put-attribute name="view" value="transfer" />
+	</definition>
+
+
+	<!-- BagSearch -->
+	<definition name="bagSearch" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Bag Search" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagSearch.jsp" />
+		<put-attribute name="view" value="bagSearch" />
+	</definition>
+
+
+	<!-- BagSplit -->
+	<definition name="bagSplit" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Bag Split" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagSplit.jsp" />
+		<put-attribute name="view" value="bagSplit" />
+	</definition>
+
+
+	<!-- Purity -->
+	<definition name="purity" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Purity Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/purity.jsp" />
+		<put-attribute name="view" value="purity" />
+	</definition>
+
+	<definition name="purity/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Purity" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addPurity.jsp" />
+		<put-attribute name="view" value="aePurity" />
+	</definition>
+
+	<!-- Shape -->
+	<definition name="shape" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Shape Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/shape.jsp" />
+		<put-attribute name="view" value="shape" />
+	</definition>
+
+	<definition name="shape/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Shape" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addShape.jsp" />
+		<put-attribute name="view" value="aeShape" />
+	</definition>
+
+	<!-- Sub Shape -->
+	<definition name="subShape" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sub Shape Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/subShape.jsp" />
+		<put-attribute name="view" value="subShape" />
+	</definition>
+
+	<definition name="subShape/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - SubShape" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSubShape.jsp" />
+		<put-attribute name="view" value="aeSubShape" />
+	</definition>
+
+	<!-- Setting -->
+	<definition name="setting" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Setting Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/setting.jsp" />
+		<put-attribute name="view" value="setting" />
+	</definition>
+
+	<definition name="setting/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Setting" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSetting.jsp" />
+		<put-attribute name="view" value="aeSetting" />
+	</definition>
+
+	<!-- StoneType -->
+	<definition name="stoneType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/stoneType.jsp" />
+		<put-attribute name="view" value="stoneType" />
+	</definition>
+
+	<definition name="stoneType/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneType" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addStoneType.jsp" />
+		<put-attribute name="view" value="aeStoneType" />
+	</definition>
+
+	<!-- SettingType -->
+	<definition name="settingType" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - SettingType Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/settingType.jsp" />
+		<put-attribute name="view" value="settingType" />
+	</definition>
+
+	<definition name="settingType/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Color" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addSettingType.jsp" />
+		<put-attribute name="view" value="aeSettingType" />
+	</definition>
+
+
+
+
+	<!-- Design Master -->
+	<definition name="designHome" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designHome.jsp" />
+		<put-attribute name="view" value="design" />
+	</definition>
+
+	<definition name="design" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/design.jsp" />
+		<put-attribute name="view" value="design" />
+	</definition>
+
+	<definition name="design/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Design" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designTabs.jsp" />
+		<put-attribute name="view" value="aeDesign" />
+	</definition>
+
+
+
+	<!-- Design Metal Master -->
+	<definition name="designMetal" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Metal Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designMetal.jsp" />
+		<put-attribute name="view" value="designMetal" />
+	</definition>
+
+	<definition name="designMetal/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addDesignMetal.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - DesignMetal" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignMetal.jsp" />
+		<put-attribute name="view" value="aeDesignMetal" />
+	</definition>
+
+
+	<!-- Design Stone Master -->
+	<definition name="designStone" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Stone Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designStone.jsp" />
+		<put-attribute name="view" value="designStone" />
+	</definition>
+
+	<definition name="designStone/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addDesignStone.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - DesignStone" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignStone.jsp" />
+		<put-attribute name="view" value="aeDesignStone" />
+	</definition>
+
+	<!-- Design Component Master -->
+	<definition name="designComponent" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Component Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designComponent.jsp" />
+		<put-attribute name="view" value="Component" />
+	</definition>
+
+	<definition name="designComponent/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addDesignComponent.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Design Component" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesignComponent.jsp" />
+		<put-attribute name="view" value="aeDesignComponent" />
+	</definition>
+
+	<!-- image upload -->
+	<definition name="design/image/upload" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Image Upload" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/imageUpload.jsp" />
+		<put-attribute name="view" value="imageUpload" />
+	</definition>
+
+	<!-- design costing -->
+	<definition name="designCost" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Design Cost" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/designCost.jsp" />
+		<put-attribute name="view" value="designCost" />
+	</definition>
+
+
+
+	<!-- Order Master -->
+	<definition name="order" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/order.jsp" />
+		<put-attribute name="view" value="order" />
+	</definition>
+
+	<definition name="order/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderTabs.jsp" />
+		<put-attribute name="view" value="aeOrder" />
+	</definition>
+
+	<definition name="orderDt/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addOrderDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Order Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderDt.jsp" />
+		<put-attribute name="view" value="aeOrderDt" />
+	</definition>
+
+	<definition name="orderStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addOrderStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Order Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderStnDt.jsp" />
+		<put-attribute name="view" value="aeOrderDt" />
+	</definition>
+
+	<definition name="orderCompDt/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addOrderCompDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Order Component Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderCompDt.jsp" />
+		<put-attribute name="view" value="aeOrderCompDt" />
+	</definition>
+
+	<!-- OrderLabDt -->
+	<definition name="orderLabDt/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addOrderLabDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - OrderLabDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderLabDt.jsp" />
+		<put-attribute name="view" value="aeOrderLabDt" />
+	</definition>
+
+
+	<definition name="orderQuality/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addOrderQuality.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Order Quality Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addOrderQuality.jsp" />
+		<put-attribute name="view" value="aeOrderQuality" />
+	</definition>
+
+
+
+
+	<!-- Order Pickup -->
+	<definition name="order/pickUp" extends="container">
+		<put-attribute name="title" value="Jewelplus - Pick Up" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/quotPickUp.jsp" />
+		<put-attribute name="view" value="order" />
+	</definition>
+
+
+
+	<!-- Auto Order Close -->
+	<definition name="autoOrderClose" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Auto Order Close" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/autoOrderClose.jsp" />
+		<put-attribute name="view" value="autoOrderClose" />
+	</definition>
+
+	<!-- Bag Generation -->
+	<definition name="bagMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Bag Generation" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagMt.jsp" />
+		<put-attribute name="view" value="aeBagMt" />
+	</definition>
+
+	<definition name="bagMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Bag Generation" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addBagMt.jsp" />
+		<put-attribute name="view" value="aeBagMt" />
+	</definition>
+
+
+	<!-- Ready Bag -->
+	<definition name="readyBag" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Ready bag" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBag.jsp" />
+		<put-attribute name="view" value="aeReadyBag" />
+	</definition>
+
+
+	<definition name="diamondBagging" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Diamond Bagging" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondBagging.jsp" />
+		<put-attribute name="view" value="aeDiamondBagging" />
+	</definition>
+	
+		<definition name="diamondBaggingTrf" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Diamond Bagging" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondBagging.jsp" />
+		<put-attribute name="view" value="aeDiamondBagging" />
+	</definition>
+
+	<definition name="diamondBagging/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Diamond Bagging" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondBaggingTabs.jsp" />
+		<put-attribute name="view" value="aeDiamondBagging" />
+	</definition>
+
+	<definition name="diaBagStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addDiaBagStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Diamond Bagging Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addDiaBagStnDt.jsp" />
+		<put-attribute name="view" value="aeDiaBagStnDt" />
+	</definition>
+
+	<definition name="orderDesign/add"
+		template="/WEB-INF/jsp/manufacturing/masters/addDesign.jsp">
+		<put-attribute name="title" value="Jewelplus - Design" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addDesign.jsp" />
+		<put-attribute name="view" value="aeOrderDesign" />
+	</definition>
+
+	<!-- <definition name="orderDesignStone" template="/WEB-INF/jsp/manufacturing/masters/orderDesignStone.jsp"> -->
+	<definition name="orderDesignStone"
+		template="/WEB-INF/jsp/manufacturing/masters/orderDesignStone.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Order Design Stone" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderDesignStone.jsp" />
+		<put-attribute name="view" value="orderDesignStone" />
+	</definition>
+
+	<!-- UserDeptTrfRight -->
+	<definition name="userDeptTrfRight" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - UserDeptTrfRight Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/userDeptTrfRight.jsp" />
+		<put-attribute name="view" value="userDeptTrfRight" />
+	</definition>
+
+
+	<!-- ValueAddition -->
+	<definition name="valueAddition" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ValueAddition Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/valueAdditionMt.jsp" />
+		<put-attribute name="view" value="valueAdditionMt" />
+	</definition>
+
+
+	<definition name="vaddMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ValueAddition" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/valueAdditionTabs.jsp" />
+		<put-attribute name="view" value="valueAdditionTabs.jsp" />
+	</definition>
+
+
+
+	<definition name="rough" extends="container">
+		<put-attribute name="title" value="Rough" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/rough.jsp" />
+		<put-attribute name="view" value="aeRough" />
+	</definition>
+
+
+
+	<!-- Reports -->
+
+
+	<definition name="departmentStock" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DepartmentStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="clientDeptInOut" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Client Dept inout" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="orderSheet" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - OrderSheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="componentStock" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ComponentStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="orderCatalog" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - OrderCatlog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="metalStock" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - MetalStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="bagging" extends="container">
+		<put-attribute name="title" value="Jewelplus - Bagging" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="baggingSummary" extends="container">
+		<put-attribute name="title" value="Jewelplus - Bagging" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="casting" extends="container">
+		<put-attribute name="title" value="Jewelplus - Casting" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="changingReceive" extends="container">
+		<put-attribute name="title" value="Jewelplus - Changing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="changingReport" extends="container">
+		<put-attribute name="title" value="Jewelplus - Changing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="changingIssue" extends="container">
+		<put-attribute name="title" value="Jewelplus - Changing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="invoiceDiamond" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="shapeDiamond" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="ordDeptAndStyleWise" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - OrderStatus" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="bagPrint" extends="container">
+		<put-attribute name="title" value="Jewelplus - BagPrint" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="readyBagReport" extends="container">
+		<put-attribute name="title" value="Jewelplus - ReadyBag" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="lossRepo" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - loss-Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="jobNoCatalog" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - jobNoCatalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="orderMetalStyleWiseReq"
+		extends="container">
+		<put-attribute name="title"
+			value="OrderMetalStyleWiseReq" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="orderMetalSummaryReq" extends="container">
+		<put-attribute name="title" value="OrderMetalSummaryReq" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="costSheet" extends="container">
+		<put-attribute name="title" value="Cost Sheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="exportWtDiff" extends="container">
+		<put-attribute name="title" value="exportWtDiff" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="costingStickerFl" extends="container">
+		<put-attribute name="title" value="Cost Sheet Sticker" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="quotSheet" extends="container">
+		<put-attribute name="title" value="Quot Sheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<definition name="packingList" extends="container">
+		<put-attribute name="title" value="Cost Sheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<definition name="orderStoneReq" extends="container">
+		<put-attribute name="title" value="Order Stone Req" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="orderComponentReq" extends="container">
+		<put-attribute name="title" value="Order Component Req" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="departmentIssueReport" extends="container">
+		<put-attribute name="title" value="Department Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="departmentReceiveReport"
+		extends="container">
+		<put-attribute name="title" value="Department Receive" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="componentIssueReport" extends="container">
+		<put-attribute name="title" value="Component Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="componentReceiveReport"
+		extends="container">
+		<put-attribute name="title" value="Component Receive" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="metalIssueReport" extends="container">
+		<put-attribute name="title" value="Metal Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="metalReceiveReport" extends="container">
+		<put-attribute name="title" value="Metal Receive" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="metalInwardReport" extends="container">
+		<put-attribute name="title" value="Metal Inward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="compInwardReport" extends="container">
+		<put-attribute name="title" value="Comp Inward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="bagWiseLoss" extends="container">
+		<put-attribute name="title" value="Bag Wise Loss" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="departmentWiseLossCatalog"
+		extends="container">
+		<put-attribute name="title"
+			value="Department Wise Loss Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="brokenRep" extends="container">
+		<put-attribute name="title" value="Broken" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="diamondAdjRep" extends="container">
+		<put-attribute name="title" value="Stone Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="brokenSummaryRep" extends="container">
+		<put-attribute name="title" value="Broken Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="fallenSummaryRep" extends="container">
+		<put-attribute name="title" value="Fallen Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="fallenRep" extends="container">
+		<put-attribute name="title" value="Bag Wise Loss" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="annexure" extends="container">
+		<put-attribute name="title" value="Annexure" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="annexureNoCost" extends="container">
+		<put-attribute name="title"
+			value="Annexure Without Cost" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="costingTag" extends="container">
+		<put-attribute name="title" value="Costing Tag" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="costingSticker" extends="container">
+		<put-attribute name="title" value="Costing Sticker" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="hmcostingSticker" extends="container">
+		<put-attribute name="title" value="Hm Costing Sticker" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="valueAdditionReport" extends="container">
+		<put-attribute name="title" value="Value Addition" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="valueAdditionInvoice" extends="container">
+		<put-attribute name="title"
+			value="Value Addition Invoice" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="hmInvoice" extends="container">
+		<put-attribute name="title" value="HM Invoice" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="nyCostSheet" extends="container">
+		<put-attribute name="title" value="NY Costing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="diamondStock" extends="container">
+		<put-attribute name="title" value="Group-Diamond" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="groupDiamondRate" extends="container">
+		<put-attribute name="title" value="Group-DiamondRate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="groupDiamondAvgRate" extends="container">
+		<put-attribute name="title" value="Group-DiamondAvgRate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+
+	<definition name="diamondConsumption" extends="container">
+		<put-attribute name="title" value="Diamond Consumption" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="diamondCustom" extends="container">
+		<put-attribute name="title" value="Diamond Custom" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="diamondInwardStatus" extends="container">
+		<put-attribute name="title"
+			value="Diamond Inward Status" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+
+	<definition name="pcsProduction" extends="container">
+		<put-attribute name="title" value="Pcs Prduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="stoneProduction" extends="container">
+		<put-attribute name="title" value="Stone Production" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="factoryStock" extends="container">
+		<put-attribute name="title" value="Factory Stock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="factoryStockWithValue" extends="container">
+		<put-attribute name="title"
+			value="Factory Stock With Value" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="wip" extends="container">
+		<put-attribute name="title" value="Wip" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="wipSummary" extends="container">
+		<put-attribute name="title" value="Wip" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="wipStatus" extends="container">
+		<put-attribute name="title" value="Wip" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<definition name="wipEmail" extends="container">
+		<put-attribute name="title" value="Wip Email" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="customProformaB" extends="container">
+		<put-attribute name="title" value="Custom Proforma B" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="plainJewelleryCosting" extends="container">
+		<put-attribute name="title"
+			value="Plain Jewellery Costing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!-- LookMast -->
+	<definition name="lookmast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - lookmast Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/lookmast.jsp" />
+		<put-attribute name="view" value="lookmast" />
+	</definition>
+
+	<definition name="lookmast/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - lookmast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLookmast.jsp" />
+		<put-attribute name="view" value="aeLookmast" />
+	</definition>
+
+	<!-- PatternMast -->
+	<definition name="patternmast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - patternmast Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/patternmast.jsp" />
+		<put-attribute name="view" value="patternmast" />
+	</definition>
+
+	<definition name="patternmast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - patternmast" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addPatternmast.jsp" />
+		<put-attribute name="view" value="aePatternmast" />
+	</definition>
+
+
+
+	<definition name="tibCatalog" extends="container">
+		<put-attribute name="title" value="TIB Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="pcsProductionSummary" extends="container">
+		<put-attribute name="title"
+			value="Pcs Production Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="stoneProductionSummary"
+		extends="container">
+		<put-attribute name="title"
+			value="Stone Production Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="metalAdjustment" extends="container">
+		<put-attribute name="title" value="Metal Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="exportMetalAdjustment" extends="container">
+		<put-attribute name="title"
+			value="Export Metal Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="changingReceiveSummary"
+		extends="container">
+		<put-attribute name="title"
+			value="Changing Receive Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="changingIssueSummary" extends="container">
+		<put-attribute name="title"
+			value="Changing Issue Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="compAdjustment" extends="container">
+		<put-attribute name="title" value="Comp Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="exportCompAdjustment" extends="container">
+		<put-attribute name="title"
+			value="Export Comp Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="exportDiamondAdjustment"
+		extends="container">
+		<put-attribute name="title"
+			value="Export Diamond Adjustment" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="exportJobCatalog" extends="container">
+		<put-attribute name="title" value="Export Job Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/exportJobCatalog.jsp" />
+		<put-attribute name="view" value="aeExportJobCatalog" />
+	</definition>
+
+	<definition name="quotationReport" extends="container">
+		<put-attribute name="title" value="Quotation Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="netLoss" extends="container">
+		<put-attribute name="title" value="NetLoss Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="preCosting" extends="container">
+		<put-attribute name="title" value="PreCosting Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="vAdditionAnnexure" extends="container">
+		<put-attribute name="title"
+			value=" Annexure Value Addition" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="factoryStockDateWise" extends="container">
+		<put-attribute name="title"
+			value=" Factory Stock DateWise" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="factoryStockWithValueDateWise"
+		extends="container">
+		<put-attribute name="title"
+			value=" Factory Stock With Value DateWise" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="jobAnnexure" extends="container">
+		<put-attribute name="title" value="Job Annexure" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="jobCostingTag" extends="container">
+		<put-attribute name="title" value="Job CostingTag" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="jobCostSheet" extends="container">
+		<put-attribute name="title" value="Job CostSheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="pdDeptStock" extends="container">
+		<put-attribute name="title" value="PD Department Stock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="hmannexureNocost" extends="container">
+		<put-attribute name="title" value="HM Annexure" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="pdProduction" extends="container">
+		<put-attribute name="title" value="PD Production" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="pdProductionSummary" extends="container">
+		<put-attribute name="title"
+			value="PD Production Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="meltingdetail" extends="container">
+		<put-attribute name="title" value="Melting Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="costSheetSummary" extends="container">
+		<put-attribute name="title" value="Cost Sheet Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="costingSummary" extends="container">
+		<put-attribute name="title" value="Costing Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="valueAdditionSummary" extends="container">
+		<put-attribute name="title"
+			value="Value Addition Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="valueAdditionDiaInSummary"
+		extends="container">
+		<put-attribute name="title"
+			value="Value Addition Dia In Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="quotationCatalog" extends="container">
+		<put-attribute name="title" value="Quotation Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="quotationCatalogReport"
+		extends="container">
+		<put-attribute name="title"
+			value="Quotation Catalog Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="exportClientCatalog" extends="container">
+		<put-attribute name="title"
+			value="Export Client Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="dateWiseExportClientCatalog"
+		extends="container">
+		<put-attribute name="title"
+			value="Date Wise Export Client Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="webUpdateCatalog" extends="container">
+		<put-attribute name="title" value="Web Update Catalog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+
+
+	<!-- Design Catlog Reports -->
+
+	<definition name="designCatlog" extends="container">
+		<put-attribute name="title" value="Design Catlog" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/designFilter.jsp" />
+		<put-attribute name="view" value="aeDesignFilter" />
+	</definition>
+
+	<definition name="designBioData" extends="container">
+		<put-attribute name="title" value="Design BioData" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/designFilter.jsp" />
+		<put-attribute name="view" value="aeDesignFilter" />
+	</definition>
+
+
+	<!-- <definition name="demo" extends="container"> <put-attribute name="title" 
+		value="Demo" /> <put-attribute name="body" value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" 
+		/> <put-attribute name="view" value="aeDesignFilter" /> </definition> -->
+
+
+	<definition name="bestSeller" extends="container">
+		<put-attribute name="title" value="Bset Sale Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/bestSeller.jsp" />
+		<put-attribute name="view" value="bestSales" />
+	</definition>
+
+	<definition name="demo" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - DiamondStock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/demoPrac.jsp" />
+		<put-attribute name="view" value="aeDemoPrac" />
+	</definition>
+
+
+	<definition name="practice" extends="container">
+		<put-attribute name="title" value="Practice" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/practice.jsp" />
+		<put-attribute name="view" value="aePractice" />
+	</definition>
+
+	<definition name="mailSent" extends="container">
+		<put-attribute name="title" value="mailSent" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/mailSent.jsp" />
+		<put-attribute name="view" value="roleRights" />
+	</definition>
+
+
+	<!-- Email config -->
+	<definition name="emailConfig" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - EmailConfig" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/emailConfig.jsp" />
+		<put-attribute name="view" value="emailConfig" />
+	</definition>
+
+
+	<!-- Design To Excel config -->
+
+
+	<definition name="designExcel" extends="container">
+		<put-attribute name="title" value="Design To Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/designExcel.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+
+
+
+	<definition name="readyBagIssueReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ReadyBag-Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="stoneInwardReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StoneInward-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+<definition name="stonePurcReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StonePurchase-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="diamondOpCl" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - diamondOpCl-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="diamondOpClGrp" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - diamondOpClGrp-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<definition name="groupWiseDiamond" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - groupWiseDiamond-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="makingReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - makingReport-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!-- StoneTransaction -->
+	<definition name="stoneTransactions" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stone Transaction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stoneTransaction.jsp" />
+		<put-attribute name="view" value="stoneTransactions" />
+	</definition>
+
+
+	<!-- DepartmentWiseLossReport -->
+	<definition name="deptWiseLoss" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - deptWiseLoss-Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!-- Export to Excel DeptStock -->
+	<definition name="deptExportToExcel" extends="container">
+		<put-attribute name="title"
+			value="Department Export To Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!-- Export to Excel PAcking List -->
+	<definition name="exportPackingList" extends="container">
+		<put-attribute name="title"
+			value="Costing Export To Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!-- multiBag Transfer -->
+	<definition name="multiBagTransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Transfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/multiBagTransfer.jsp" />
+		<put-attribute name="view" value="transfer" />
+	</definition>
+	
+	
+	<!-- Barcode Gen-->
+	<definition name="barcodeGen" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Transfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/barcodeGen.jsp" />
+		<put-attribute name="view" value="barcodeGen" />
+	</definition>
+
+
+	<!-- Bag Genration Qty -->
+	<definition name="bagGenQty" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - bagGenQty Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/bagGenQty.jsp" />
+		<put-attribute name="view" value="bagGenQty" />
+	</definition>
+
+
+	<definition name="bagGenQty/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - bagGenQty" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addBagGenQty.jsp" />
+		<put-attribute name="view" value="bagGenQty" />
+	</definition>
+
+	<!-- New Ready Bag Issue -->
+	<definition name="newReadyBagIssue" extends="container">
+		<put-attribute name="title" value="redy bag issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/newReadyBagIssue.jsp" />
+		<put-attribute name="view" value="newReadyBagIssue" />
+	</definition>
+
+
+	<!-- Loss & Dust Recovery -->
+	<definition name="lossDustRecoveryReport"
+		extends="container">
+		<put-attribute name="title" value="Loss Dust Recovery" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!-- Worker Wise Loss and Dust Report -->
+	<definition name="WorkerWiseLossAndDust" extends="container">
+		<put-attribute name="title"
+			value="Worker wise Loss Dust Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<!-- Metal Addition -->
+	<definition name="metalAdditionReport" extends="container">
+		<put-attribute name="title"
+			value="Metal Addition Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!-- Metal Deduction -->
+	<definition name="metalDeductionReport" extends="container">
+		<put-attribute name="title"
+			value="Metal Deduction Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<!-- Melting Stone Receive -->
+	<definition name="meltStnRec" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Melting Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/meltStnRec.jsp" />
+		<put-attribute name="view" value="melting" />
+	</definition>
+
+	<definition name="meltStnRec/add" extends="container">
+		<put-attribute name="title" value="Add - Melting " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMeltStnRec.jsp" />
+		<put-attribute name="view" value="melting" />
+	</definition>
+
+
+
+
+	<!-- Stone Conversion Report -->
+	<definition name="stoneConversionRep" extends="container">
+		<put-attribute name="title" value="Stone Conversion " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+	<!-- Export Sales Report -->
+	<definition name="exportSalesSummary" extends="container">
+		<put-attribute name="title" value="Sales Summary " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!-- Production Summary Report -->
+	<definition name="prodDeptWiseReport" extends="container">
+		<put-attribute name="title" value="Production Summary " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!-- CostingMt Item New -->
+	<definition name="costingMtNew" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - CostingMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/costingMtNew.jsp" />
+		<put-attribute name="view" value="costingMt" />
+	</definition>
+
+
+	<definition name="costingMtNew/add" extends="container">
+		<put-attribute name="title" value="Add - Costing " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostingMtNew.jsp" />
+		<put-attribute name="view" value="costing" />
+	</definition>
+
+	<!-- CostingDt Item -->
+	<definition name="costingDtItem/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostingDtItem.jsp">
+		<put-attribute name="title" value="Jewelplus - Costing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostingDtItem.jsp" />
+		<put-attribute name="view" value="aeCostingDt" />
+	</definition>
+
+	<!-- CostingStn Item -->
+	<definition name="costStnDtItem/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostStnDtItem.jsp">
+		<put-attribute name="title" value="Jewelplus - Costing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostStnDtItem.jsp" />
+		<put-attribute name="view" value="aeCostingDt" />
+	</definition>
+
+	<!-- CostCompDt Item -->
+	<definition name="costCompDtItem/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostCompDtItem.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - CostCompDt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostCompDtItem.jsp" />
+		<put-attribute name="view" value="aeCostCompDt" />
+	</definition>
+
+	<!-- CostLabDt Item -->
+	<definition name="costLabDtItem/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addCostLabDtItem.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Costing Laboour" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addCostLabDtItem.jsp" />
+		<put-attribute name="view" value="aeCostLabDt" />
+	</definition>
+
+	<!--Client Reference -->
+	<definition name="clientStamp" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Client Stamp Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/clientStamp.jsp" />
+		<put-attribute name="view" value="clientRef" />
+	</definition>
+
+	<!-- Department Wise Summary Report -->
+	<definition name="deptWiseSummary" extends="container">
+		<put-attribute name="title"
+			value="Department Wise Summary " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+
+
+	<definition name="wipStatusReport" extends="container">
+		<put-attribute name="title" value="WIP Status Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!--Handling Rate FL -->
+	<definition name="handlingMasterFl" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Handling Rate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/handlingMasterFL.jsp" />
+		<put-attribute name="view" value="handlingMasterFl" />
+	</definition>
+
+	<definition name="exportDiaRate" extends="container">
+		<put-attribute name="title" value="Diamond Rate Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<definition name="quotDiaRate" extends="container">
+		<put-attribute name="title" value="Diamond Rate Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!--Export Metal Rate -->
+	<definition name="exportGoldRate" extends="container">
+		<put-attribute name="title" value="Metal Rate Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!--Export Diamond Statement -->
+	<definition name="exportDiaDetails" extends="container">
+		<put-attribute name="title"
+			value="Export Diamond Statement Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--Export Diamond Statement II -->
+	<definition name="exportDiaStatementII" extends="container">
+		<put-attribute name="title"
+			value="Export Diamond Statement II Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--value Addition Export Diamond Details -->
+	<definition name="vAddExportDiaDt" extends="container">
+		<put-attribute name="title"
+			value="Export Diamond Detail Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+	<!--Diamond Balance Report -->
+	<definition name="diaBalanceSizeWise" extends="container">
+		<put-attribute name="title"
+			value="Diamond Balance Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--Consumption Report -->
+	<definition name="consumptionReport" extends="container">
+		<put-attribute name="title" value="Consumption Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--Melting Stone Receive Report -->
+	<definition name="meltingStnRec" extends="container">
+		<put-attribute name="title"
+			value="Melting Stone Receive Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!-- Voucher Transfer -->
+	<definition name="voucherTrfMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Voucher Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/voucherTrf.jsp" />
+		<put-attribute name="view" value="Voucher Transfer" />
+	</definition>
+
+
+	<definition name="voucherTrfMt/add" extends="container">
+		<put-attribute name="title" value="voucher Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addVoucherTrf.jsp" />
+		<put-attribute name="view" value="aeVoucherTrf" />
+	</definition>
+
+
+	<!-- bagRollback -->
+	<definition name="bagRollback" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Bag Rollback" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/bagRollback.jsp" />
+		<put-attribute name="view" value="bagRollback" />
+	</definition>
+
+	<!-- Metal Purchase Mt -->
+	<definition name="metalPurchaseMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Metal Purchase" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalPurchaseMt.jsp" />
+		<put-attribute name="view" value="Metal Purchase" />
+	</definition>
+
+
+	<definition name="metalPurchaseMt/add" extends="container">
+		<put-attribute name="title" value="Metal Purchase" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalPurchaseMt.jsp" />
+		<put-attribute name="view" value="Metal Purchase" />
+	</definition>
+
+	<!-- Metal Purchase Dt -->
+	<definition name="metalPurchaseDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - metalPurchaseDt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/metalPurchaseDt.jsp" />
+		<put-attribute name="view" value="metalInwardDt" />
+	</definition>
+
+	<definition name="metalPurchaseDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addMetalPurchaseDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Metal Purchase Dt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addMetalPurchaseDt.jsp" />
+		<put-attribute name="view" value="aeMetalPurchaseDt" />
+	</definition>
+
+	<!--Export Finding Report -->
+	<definition name="exportWiseFinding" extends="container">
+		<put-attribute name="title"
+			value="Export FInding Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--Stone Inward Against Order -->
+	<definition name="stnInwAgainstOrder" extends="container">
+		<put-attribute name="title" value="Order Stone Inward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnInwAgainstOrder.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+
+	<!--Stone Outward Against Order -->
+	<definition name="stnOutwAgainstOrder" extends="container">
+		<put-attribute name="title" value="Order Stone Outward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnInwAgainstOrder.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	<!--Job Work Issue -->
+	<definition name="jobIssMt" extends="container">
+		<put-attribute name="title"
+			value="Job Work Issue Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/jobIssMt.jsp" />
+		<put-attribute name="view" value="Job Work Issue" />
+	</definition>
+
+	<definition name="jobIssMt/add" extends="container">
+		<put-attribute name="title" value="Job Work Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addJobIssMt.jsp" />
+		<put-attribute name="view" value="Job Work Issue" />
+	</definition>
+
+	<definition name="jobIssBagTransfer" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Job Issue Bag Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/jobIssBagTransfer.jsp" />
+		<put-attribute name="view" value="costingTransfer" />
+	</definition>
+
+	<!--Job Work Receive -->
+	<definition name="jobRecMt" extends="container">
+		<put-attribute name="title"
+			value="Job Work Receive Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/jobRecMt.jsp" />
+		<put-attribute name="view" value="Job Work Receive" />
+	</definition>
+
+	<definition name="jobRecMt/add" extends="container">
+		<put-attribute name="title" value="Job Work Receive" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addJobRecMt.jsp" />
+		<put-attribute name="view" value="Job Work Receive" />
+	</definition>
+
+	<!-- LocationRights -->
+	<definition name="locationRights" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Location Rights Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/locationRights.jsp" />
+		<put-attribute name="view" value="locationRights" />
+	</definition>
+
+	<!-- StonePurchaseMt -->
+	<definition name="stonePurchaseMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Stone Purchase Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stonePurchaseMt.jsp" />
+		<put-attribute name="view" value="stonePurchaseMt" />
+	</definition>
+
+	<definition name="stonePurchaseMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Stone Purchase" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStonePurchaseMt.jsp" />
+		<put-attribute name="view" value="stonePurchaseMt" />
+	</definition>
+
+	<!-- CompoentPurchaseMt -->
+	<definition name="componentPurchaseMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Component Purchase Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentPurchaseMt.jsp" />
+		<put-attribute name="view" value="stonePurchaseMt" />
+	</definition>
+
+	<definition name="componentPurchaseMt/add"
+		extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Component Purchase" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addComponentPurchaseMt.jsp" />
+		<put-attribute name="view" value="componentPurchaseMt" />
+	</definition>
+
+
+	<!-- Pending Approval -->
+	<definition name="pendingApproval" extends="container">
+		<put-attribute name="title" value="Pending Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/pendingApproval.jsp" />
+		<put-attribute name="view" value="pendingApproval" />
+	</definition>
+	
+		<!--Party Wise WIP Style -->
+	<definition name="wipStyle" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - WIP Style" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/wipStyle.jsp" />
+		<put-attribute name="view" value="WIPStyle" />
+	</definition>
+	
+		<!--Order Wise Diamond Stock Report -->
+	<definition name="orderwisediastock" extends="container">
+		<put-attribute name="title"
+			value="Order Wise Diamond Stock Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+			<!--Component Outward Report -->
+	<definition name="compOutwardReport" extends="container">
+		<put-attribute name="title"
+			value="Component Outward Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!-- trfForReadybagIss -->
+	<definition name="trfForReadybagIss" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Transfer For ReadyBag Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/multiBagTransfer.jsp" />
+		<put-attribute name="view" value="trfForReadybagIss" />
+	</definition>
+	
+	
+	<definition name="componentAdditionDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/componentAdditionDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Component Addition" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentAdditionDt.jsp" />
+		<put-attribute name="view" value="aeCompInwardDt" />
+	</definition>
+	
+	<definition name="componentDeduction/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/componentDeductionDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Component Deduction" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/componentDeductionDt.jsp" />
+		<put-attribute name="view" value="aeCompInwardDt" />
+	</definition>
+	
+	
+	<!-- diamondAllocationAgainstOrder -->
+	<definition name="diamondAllocationAgainstOrder" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Diamond Allocation Against Order" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondAllocation.jsp" />
+		<put-attribute name="view" value="diamondAllocationAgainstOrder" />
+	</definition>
+	
+	
+	<definition name="ledgerGroup" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - LedgerGroup Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/ledgerGroup.jsp" />
+		<put-attribute name="view" value="LedgerGroup" />
+	</definition>
+
+	<definition name="ledgerGroup/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - LedgerGroup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLedgerGroup.jsp" />
+		<put-attribute name="view" value="LedgerGroup" />
+	</definition>
+	
+	
+	<definition name="ledger" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Ledger Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/ledger.jsp" />
+		<put-attribute name="view" value="Ledger" />
+	</definition>
+	
+		<definition name="ledger/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Ledger" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addLedger.jsp" />
+		<put-attribute name="view" value="Ledger" />
+	</definition>
+	
+	<!-- 	Market Type Master -->
+	
+		<definition name="marketTypeMast" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - Market Type Transfer " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/marketTypeMast.jsp" />
+			<put-attribute name="view" value="MarketTypeMast" />
+		</definition>
+	
+		<definition name="marketTypeMast/add" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - AddMarket Type Transfer " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/addMarketType.jsp" />
+			<put-attribute name="view" value="aeMarketTypeMast" />
+		</definition>
+
+		<!--Product Type Master -->
+		
+			<definition name="productTypeMast" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - Product Type Transfer " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/productTypeMast.jsp" />
+			<put-attribute name="view" value="ProductTypeMast" />
+		</definition>
+	
+		<definition name="productTypeMast/add" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - AddProduct Type Transfer " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/addProductType.jsp" />
+			<put-attribute name="view" value="aeProductTypeMast" />
+		</definition> 			
+		
+		
+			<!--METAL LOCK -->
+
+			<definition name="metalLock" extends="container">
+				<put-attribute name="title"
+					value="Jewelplus - Metal Lock Listing" />
+				<put-attribute name="body"
+					value="/WEB-INF/jsp/manufacturing/masters/metalLockMast.jsp" />
+				<put-attribute name="view" value="metalLock" />
+			</definition>
+		
+			<definition name="metalLock/add" extends="container">
+				<put-attribute name="title" value="Jewelplus - MetalLock" />
+				<put-attribute name="body"
+					value="/WEB-INF/jsp/manufacturing/masters/addMetalLock.jsp" />
+				<put-attribute name="view" value="aeMetalLock" />
+			</definition>
+			
+			
+			<!-- Auto Style Parameter -->
+				
+			<definition name="autoStyleParameter" extends="container">
+				<put-attribute name="title"
+					value="Jewelplus -AutoStyleParameter Listing" />
+				<put-attribute name="body"
+					value="/WEB-INF/jsp/manufacturing/masters/autoStyleParameterMast.jsp" />
+				<put-attribute name="view" value="autoStyleParameter" />
+			</definition>
+		
+				<definition name="autoStyleParameter/add" extends="container">
+				<put-attribute name="title"
+					value="Jewelplus -AutoStyleParameter" />
+				<put-attribute name="body"
+					value="/WEB-INF/jsp/manufacturing/masters/addAutoStyleParameter.jsp" />
+				<put-attribute name="view" value="aeAutoStyleParameter" />
+			</definition>
+			
+		
+	<!-- Barcode Generation new-->
+	<definition name="barcodeMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Barcode Mt Listing" />
+		<put-attribute name="body"	
+		value="/WEB-INF/jsp/manufacturing/transactions/barcodeMt.jsp" />
+		<put-attribute name="view" value="barcodeMt" />
+	</definition>
+	
+	
+	<definition name="barcodeMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Barcode " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addBarcodeMt.jsp" />
+		<put-attribute name="view" value="aeBarcodeMt" />
+	</definition>
+					
+				<!-- fgStockIss -->
+	<definition name="fgIssMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - fgIssMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/fgIssMt.jsp" />
+		<put-attribute name="view" value="fgIssMt" />
+	</definition>
+	
+	
+	<definition name="fgIssMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FG Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addFgIssMt.jsp" />
+		<put-attribute name="view" value="aeFgIssMt" />
+	</definition>
+	
+	
+	
+		<!--FG Transfer-->
+	<definition name="fgBagTransfer" extends="container">
+		<put-attribute name="title" value="FG Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/fgBagTransfer.jsp" />
+		<put-attribute name="view" value="aeFgBagTransfer" />
+	</definition>
+			
+			
+			
+				<!--FG Transfer-->
+	<definition name="fgIssMtApp" extends="container">
+		<put-attribute name="title" value="FG Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/fgIssMtApproval.jsp" />
+		<put-attribute name="view" value="aefgIssMtApp" />
+	</definition>
+			
+			
+	<definition name="partyExcelFileUploaded" extends="container">
+		<put-attribute name="title"	value="Jewelplus - Party Excel" />
+		<put-attribute name="body" 
+			value="/WEB-INF/jsp/manufacturing/masters/partyExcelUpload.jsp" />
+		<put-attribute name="view" value="aePartyExcel" />
+	</definition>
+	
+	
+	
+	
+	
+				<!-- PackingList -->
+	<definition name="packList" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - PackingList" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/packingList.jsp" />
+		<put-attribute name="view" value="packingList" />
+	</definition>
+	
+	
+	<definition name="packList/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - packingList add" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addPackingList.jsp" />
+		<put-attribute name="view" value="aePackingList" />
+	</definition>
+	
+	
+	<!-- OrderApproval -->
+		<definition name="orderApproval" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderApproval.jsp" />
+		<put-attribute name="view" value="aeOrderApproval" />
+	</definition>
+	
+				<!-- stockUpload-->
+	<definition name="stockUpload" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stock Uplaod" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockUpload.jsp" />
+		<put-attribute name="view" value="stock Upload" />
+	</definition>
+	
+		<!--ClientKtConv Master -->
+		
+			<definition name="clientKtConvMast" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - Client Kt Conv " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/clientKtConvMast.jsp" />
+			<put-attribute name="view" value="ClientKtConvMast" />
+		</definition>
+	
+		<definition name="clientKtConvMast/add" extends="container">
+			<put-attribute name="title"
+				value="JewelPlus - Add Client Kt Conv " />
+			<put-attribute name="body"
+				value="/WEB-INF/jsp/manufacturing/masters/addClientKtConv.jsp" />
+			<put-attribute name="view" value="aeClientKtConvMast" />
+		</definition> 		
+		
+		
+		
+			<!-- ClientStyleLab -->
+	<definition name="clientStyleLab" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ClientStyleLab Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/clientStyleLab.jsp" />
+		<put-attribute name="view" value="clientStyleLab" />
+	</definition>
+
+	<definition name="clientStyleLab/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ClientStyleLab" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addClientStyleLab.jsp" />
+		<put-attribute name="view" value="aeClientStyleLab" />
+	</definition>	
+
+
+<!-- ConsigMt-->
+	<definition name="consigMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Consignment Issue List" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/consigList.jsp" />
+		<put-attribute name="view" value="Consignment Issue List" />
+	</definition>
+	
+		<definition name="consigMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Consignment Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addConsigList.jsp" />
+		<put-attribute name="view" value="Consignment Issue" />
+	</definition>
+	
+		<!-- Branch -->
+	<definition name="branchMaster" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Branch Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/branchMast.jsp" />
+		<put-attribute name="view" value="branchMaster" />
+	</definition>
+
+	<definition name="branchMaster/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Branch" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addBranchMast.jsp" />
+		<put-attribute name="view" value="aeBranchMaster" />
+	</definition>
+	
+		<!-- Stock Report -->
+	<definition name="stockReportLX" extends="container">
+		<put-attribute name="title"
+			value="Stock Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+			<!-- One Line Summary Report -->
+	<definition name="barcodeWiseSummary" extends="container">
+		<put-attribute name="title"
+			value="One Line Summary Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	
+				<!-- SaleMt -->
+	<definition name="saleMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sale Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/saleMt.jsp" />
+		<put-attribute name="view" value="saleMt" />
+	</definition>
+	
+	
+	<definition name="saleMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sale Invoice" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addSaleMt.jsp" />
+		<put-attribute name="view" value="Consignment Issue" />
+	</definition>
+	
+	<!-- HSNMast -->
+					
+	<definition name="hSNMast" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - HSN" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/hsnMast.jsp" />
+		<put-attribute name="view" value="hSNMast" />
+	</definition>
+	
+	
+	<definition name="hSNMast/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - HSN add" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addHSN.jsp" />
+		<put-attribute name="view" value="aehSNMast" />
+	</definition>
+	
+		<!--Kt Conversion  -->
+	<definition name="alloyingReport" extends="container">
+		<put-attribute name="title"
+			value="Kt Conversion Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+	
+				<!-- StkTrfMt -->
+	<definition name="stkTrfMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Inter Department Transfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stkTrfMt.jsp" />
+		<put-attribute name="view" value="saleMt" />
+	</definition>
+	
+	
+	<definition name="stkTrfMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Inter Department Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addStkTrfMt.jsp" />
+		<put-attribute name="view" value="Stock Transfer" />
+	</definition>
+	
+		<!--stonePurchaseAdjReport  -->
+	<definition name="stonePurchaseAdjReport" extends="container">
+		<put-attribute name="title"
+			value="Stone Purchase Adj Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	
+	<!--exportAdjReport  -->
+	<definition name="exportAdjReport" extends="container">
+		<put-attribute name="title"
+			value="Export Adj Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<!-- PackLabDt Add -->
+	<definition name="packLabDt/add"
+		template="/WEB-INF/jsp/marketing/transactions/addPackLabDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus -Laboour" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addPackLabDt.jsp" />
+		<put-attribute name="view" value="aePackLabDt" />
+	</definition>
+	
+	<!-- PackCompDt Add -->
+	<definition name="packCompDt/add"
+		template="/WEB-INF/jsp/marketing/transactions/addPackCompDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus -Component" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addPackCompDt.jsp" />
+		<put-attribute name="view" value="aePackCompDt" />
+	</definition>
+	
+				<!-- branchStkTrfMt -->
+	<definition name="branchStkTrfMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Branch Transfer Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/branchStkTrfMt.jsp" />
+		<put-attribute name="view" value="branchStkTrfMt" />
+	</definition>
+	
+		<definition name="branchStkTrfMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Branch Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addBranchStkTrf.jsp" />
+		<put-attribute name="view" value="Branch Transfer" />
+	</definition>
+	
+					<!-- brTrfPendApproval -->
+	<definition name="brTrfPendApproval" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Branch Receive Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/branchPendingApproval.jsp" />
+		<put-attribute name="view" value="brTrfPendApproval" />
+	</definition>
+
+					<!-- stkTrfPendApproval -->
+	<definition name="stkTrfPendApproval" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stock Receive Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockPendingApproval.jsp" />
+		<put-attribute name="view" value="brTrfPendApproval" />
+	</definition>
+
+	<definition name="wipCasting" extends="container">
+		<put-attribute name="title" value="Wip" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+			<!-- ConsigRetMt-->
+	<definition name="consigRetMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Consignment Return List" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/consigRetMt.jsp" />
+		<put-attribute name="view" value="Consignment Return List" />
+	</definition>
+	
+		<definition name="consigRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Consignment Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addConsigRetMt.jsp" />
+		<put-attribute name="view" value="Consignment Return" />
+	</definition>
+	
+	<!-- SaleRetMt -->
+					
+	<definition name="saleRetMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sales Return Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/saleRetMt.jsp" />
+		<put-attribute name="view" value="saleRetMt" />
+	</definition>
+	
+	
+	<definition name="saleRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Sales Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addSaleRetMt.jsp" />
+		<put-attribute name="view" value="Consignment Return" />
+	</definition>
+	
+	<definition name="DeptDiamondstk" extends="container">
+		<put-attribute name="title" value="Diamond Stock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+		<!-- barcodeSearch -->					
+	<definition name="barcodeSearch" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Barcode Search" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/barcodeSearch.jsp" />
+		<put-attribute name="view" value="barcodeSearch" />
+	</definition>
+	
+		<!-- OrderUnApproval -->
+		<definition name="orderUnApproval" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order UnApproval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderUnApproved.jsp" />
+		<put-attribute name="view" value="aeOrderUnApproval" />
+	</definition>
+	
+	<definition name="orderDcb1" extends="container">
+		<put-attribute name="title" value="Order DCB" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<definition name="orderDcb2" extends="container">
+		<put-attribute name="title" value="Order DCB" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+<definition name="quotDcb1" extends="container">
+		<put-attribute name="title" value="Quotation DCB" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<definition name="costDcb1" extends="container">
+		<put-attribute name="title" value="Costing DCB" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<definition name="uploadExcelQuotDtStyle" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Quotation Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/quotDtExcelUpload.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+	
+	<definition name="uploadExcelOrderDtStyle" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/orderDtExcelUpload.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+	
+	
+	<definition name="vendorBagBalRpt" extends="container">
+		<put-attribute name="title" value="Vendor Bal Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<definition name="exportListNuance" extends="container">
+		<put-attribute name="title" value="Export List" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<definition name="salesOrderSheet" extends="container">
+		<put-attribute name="title" value="Sales Order Sheet" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!-- Goods Receipt Master -->
+	<definition name="grecMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Goods Receipt Listing" />
+		<put-attribute name="body"                     
+			value="/WEB-INF/jsp/marketing/transactions/grecMt.jsp" />
+		<put-attribute name="view" value="grecMt" />
+	</definition>
+
+	<definition name="grecMt/add" extends="container">
+		<put-attribute name="title" value="Jewelplus - Goods Receipt" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addGrecMt.jsp" />
+		<put-attribute name="view" value="aeGrecMt" />
+	</definition>
+	
+		<!--Marketing Set Opening -->
+	<definition name="tranMtMarketing" extends="container">
+		<put-attribute name="title" value="Set Opening" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addTranMtMarketing.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		
+	<definition name="fgStockReceive" extends="container">
+		<put-attribute name="title" value="FG Stock" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+
+	
+		<!-- readyBagIssMt -->
+	<definition name="readyBagIssMt" extends="container">
+		<put-attribute name="title" value="Ready Bag Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagIssMt.jsp" />
+		<put-attribute name="view" value="readyBagIssMt" />
+	</definition>
+	
+	<definition name="readyBagIssMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Ready Bag Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addReadyBagIssMt.jsp" />
+		<put-attribute name="view" value="readyBagIssMt" />
+	</definition>
+	
+	
+	
+	
+	<!--readyBagTranfer -->
+	<definition name="readyBagTranfer" extends="container">
+		<put-attribute name="title" value="Ready Bag Issue Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagTranfer.jsp" />
+		<put-attribute name="view" value="readyBagTranfer" />
+	</definition>
+	
+	<!-- readyBagApproval -->
+	<definition name="readyBagApproval" extends="container">
+		<put-attribute name="title" value="Ready Bag Pending Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagApproval.jsp" />
+		<put-attribute name="view" value="readyBagApproval" />
+	</definition>
+	
+	
+	
+		<!-- readyBagretMt -->
+	<definition name="readyBagRetMt" extends="container">
+		<put-attribute name="title" value="Ready Bag Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagRetMt.jsp" />
+		<put-attribute name="view" value="readyBagRetMt" />
+	</definition>
+	
+	<definition name="readyBagRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Ready Bag Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addReadyBagRetMt.jsp" />
+		<put-attribute name="view" value="readyBagRetMt" />
+	</definition>
+	
+	
+	
+		<!--readyBagReturnList -->
+	<definition name="readyBagReturnList" extends="container">
+		<put-attribute name="title" value="Ready Bag Return List" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagReturnList.jsp" />
+		<put-attribute name="view" value="readyBagReturnList" />
+	</definition>
+	
+	
+	
+		<definition name="jobRecStnDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addJobRecStnDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - JobWork Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addJobRecStnDt.jsp" />
+		<put-attribute name="view" value="aeJobDt" />
+	</definition>
+
+	<!-- Ready Bag -->
+	<definition name="readyBagReturn" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Ready bag Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagReturn.jsp" />
+		<put-attribute name="view" value="aeReadyBag" />
+	</definition>
+	
+			<!--Exchange Rate Master -->
+		<definition name="exchangeRate" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ExchangeRate" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/exchangeRateMast.jsp" />
+		<put-attribute name="view" value="exchangeRateMast" />
+	</definition>
+	
+	
+	<definition name="exchangeRate/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - ExchangeRateMast add" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/addExchangeRateMast.jsp" />
+		<put-attribute name="view" value="aeexchangeRateMast" />
+	</definition>
+	
+		<!-- diamondDeAllocation -->
+	<definition name="diamondDeAllocation" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus-Diamond De Allocation" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/diamondDeAllocation.jsp" />
+		<put-attribute name="view" value="diamondDeAllocation" />
+	</definition>
+	
+		<!-- Sale Register Report -->
+		<definition name="saleRegister" extends="container">
+		<put-attribute name="title" value="Sale Register" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+				
+				<!-- FgRetList -->
+	<definition name="fgRetMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FG Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/fgRetMt.jsp" />
+		<put-attribute name="view" value="fgRetMt" />
+	</definition>
+	
+	
+	<definition name="fgRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - FG Return add" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addFgRetMt.jsp" />
+		<put-attribute name="view" value="fgRetMt" />
+	</definition>
+	
+				<!--Stone Loose Diamond Issue and Rec Report -->
+	<definition name="stoneLooseDia" extends="container">
+		<put-attribute name="title"
+			value="Stone Loose Diamond Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+			<!-- FG Stock Issue Report -->
+	<definition name="fgIssueStockSummary" extends="container">
+		<put-attribute name="title"
+			value="FG Stock Issue Summary Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!-- Stock Mis Report -->
+	<definition name="stockMis" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - stockMis" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- Stock Miswithout value Report -->
+	<definition name="stockMisWithoutValue" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StockMisWithoutValue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	
+	<!-- Stock Miswithout value Report -->
+	<definition name="stockMisAsOn" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - stockMisAsOn" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+		<!-- Ready Bag Transfer Report -->
+	<definition name="readyBagTrnsfr" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - readyBagTrnsfrreport" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!-- purchase Register Report -->
+	<definition name="purchaseRegisterReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Purchase Register Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+		<!-- Reset Password -->
+	<definition name="user/passwordReset" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus -  Reset Password" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/admin/passwordReset.jsp" />
+		<put-attribute name="view" value="ResetPassword" />
+	</definition>
+	
+			<!-- Rerpair Stock Issue -->
+	<definition name="repairIssMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - repairIssMt Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/repairIssMt.jsp" />
+		<put-attribute name="view" value="repairIssMt" />
+	</definition>
+	
+	
+	<definition name="repairIssMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Repair Issue" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addRepairIssMt.jsp" />
+		<put-attribute name="view" value="aeRepairIssMt" />
+	</definition>
+	
+	
+		
+		<!--Repair Transfer-->
+	<definition name="repairBagTransfer" extends="container">
+		<put-attribute name="title" value="Repair Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/repairBagTransfer.jsp" />
+		<put-attribute name="view" value="aeRepairBagTransfer" />
+	</definition>
+			
+			
+			
+				<!--Repair Transfer-->
+	<definition name="repairIssMtApp" extends="container">
+		<put-attribute name="title" value="FG Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/repairIssMtApproval.jsp" />
+		<put-attribute name="view" value="aerepairIssMtApp" />
+	</definition>
+	
+		<!-- fgIssSummaryWithVal Report -->
+	<definition name="fgIssSummaryWithVal" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - fg Issue Summary With Value" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- jobworkissueDetail Report -->
+	<definition name="jobworkissueDetail" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Jobwor Issue Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!-- jobworkRecDetail Report -->
+	<definition name="jobworkRecDetail" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Jobwor Receive Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<!--StockMeltingMt -->
+	<definition name="stockMeltingMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stock Melting" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockMeltingMt.jsp" />
+		<put-attribute name="view" value="stockMeltingMt" />
+	</definition>
+	
+	
+		<definition name="stockMeltingMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - StockMelting add" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/addStockMeltingMt.jsp" />
+		<put-attribute name="view" value="stockMeltingMt" />
+	</definition>
+	
+	<!-- metalInwardReportWithValue Report -->
+	<definition name="metalInwardReportWithValue" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Metal Inward With Value" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!--Stock Melting Transfer-->
+	<definition name="stockMeltingTransfer" extends="container">
+		<put-attribute name="title" value="Stock Melting Transfer" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockMeltingTransfer.jsp" />
+		<put-attribute name="view" value="stockMeltingTransfer" />
+	</definition>
+	
+	<!--Stock Melting Pickup Transfer-->
+	<definition name="stockMeltingPickup/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stock Melting Pickup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stockMeltingPickup.jsp" />
+		<put-attribute name="view" value="stockMeltingPickup" />
+	</definition>
+	
+	
+			<!--Stock Melting Approval-->
+	<definition name="stockMeltingApproval" extends="container">
+		<put-attribute name="title" value="Stock Melting Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockMeltingApproval.jsp" />
+		<put-attribute name="view" value="stockMeltingApproval" />
+	</definition>
+	
+			<!-- Sale Register With Cost Report -->
+		<definition name="saleRegisterWithCost" extends="container">
+		<put-attribute name="title" value="Sale Register with Cost" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+		<!--orderPickupForGrn-->
+	<definition name="orderPickupForGrn" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Order Pickup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/orderPickupForGrn.jsp" />
+		<put-attribute name="view" value="orderPickupForGrn" />
+	</definition>
+	
+	
+	
+	<definition name="readyBagRetApproval" extends="container">
+		<put-attribute name="title" value="Ready Bag Return Approval" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/readyBagRetApproval.jsp" />
+		<put-attribute name="view" value="aereadyBagRetApproval" />
+	</definition>
+	
+			<!-- barcodeReport -->
+	<definition name="barcodeReport" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Barcode Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/barcodeStnDtReport.jsp" />
+		<put-attribute name="view" value="barcodeReport" />
+	</definition>
+	
+	<definition name="uploadExcelBarcode" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Barcode Excel" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/barcodeExcelUpload.jsp" />
+		<put-attribute name="view" value="aeDesignExcel" />
+	</definition>
+	
+	
+		<!--RepairRet  -->
+	<definition name="repairRetMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Repair Return Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/repairRetMt.jsp" />
+		<put-attribute name="view" value="repairRetMt" />
+	</definition>
+	
+	<definition name="repairRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Repair Return " />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addRepairRetMt.jsp" />
+		<put-attribute name="view" value="repairRetMt" />
+	</definition>
+	
+		
+	<!--repairRetPickup -->
+	<definition name="repairRetPickup" extends="container">
+		<put-attribute name="title" value="Repair Return Pickup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/repairRetPickup.jsp" />
+		<put-attribute name="view" value="repairRetPickup" />
+	</definition>
+
+<!-- stockMeltingReport -->
+		<definition name="stockMeltingReport" extends="container">
+		<put-attribute name="title" value="Stock Melting Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<!-- salesRegisterOneLineSummary -->
+		<definition name="salesRegisterOneLineSummary" extends="container">
+		<put-attribute name="title" value="Sales Register One Line Summary Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- stoneOutward report -->
+		<definition name="stoneOutward" extends="container">
+		<put-attribute name="title" value="Stone Outward Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- branchTrfOneLineSummary report -->
+		<definition name="branchTrfOneLineSummary" extends="container">
+		<put-attribute name="title" value="Brach Transfer Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<!-- JobrecLabDt Add -->
+	<definition name="jobRecLabDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addJobRecLabDt.jsp">
+		<put-attribute name="title" value="Jewelplus -Laboour" />
+		<put-attribute name="body" value="/WEB-INF/jsp/manufacturing/transactions/addJobRecLabDt.jsp" />
+		<put-attribute name="view" value="aeJobRecLabDt" />
+	</definition>
+	
+	<!--stockPickup -->
+	<definition name="stockPickupForPacking" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Stock Melting" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/marketing/transactions/stockPickupForPacking.jsp" />
+		<put-attribute name="view" value="stockPickupForPacking" />
+	</definition>
+
+<!-- diamondBalanceReq report -->
+		<definition name="diamondBalanceReq" extends="container">
+		<put-attribute name="title" value="Diamond Balance Req Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- consigIssDetails report -->
+		<definition name="consigIssDetails" extends="container">
+		<put-attribute name="title" value="Consignment Issue Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+<!-- consigRetDetails report -->
+		<definition name="consigRetDetails" extends="container">
+		<put-attribute name="title" value="Consignment Return Report" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	<!-- stockmissummary report -->
+		<definition name="stockmissummary" extends="container">
+		<put-attribute name="title" value="StockMis Summary" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/reports/orderFilter.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+
+
+<!-- stnLooseMt -->
+	<definition name="stnLooseMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnLooseMt.jsp" />
+		<put-attribute name="view" value="stoneInwardMt" />
+	</definition>
+
+	 <definition name="stnLooseMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Inward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStnLooseMt.jsp" />
+		<put-attribute name="view" value="aeStoneInwardMt" />
+	</definition>
+	
+	
+	<!-- stnLooseDt -->
+	<definition name="stnLooseDt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Details" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnLooseDt.jsp" />
+		<put-attribute name="view" value="stnLooseDt" />
+	</definition>
+
+	<definition name="stnLooseDt/add"
+		template="/WEB-INF/jsp/manufacturing/transactions/addStnLooseDt.jsp">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Inward" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStnLooseDt.jsp" />
+		<put-attribute name="view" value="stnLooseDt" />
+	</definition>
+	
+	
+		<!-- stnLooseConversion -->
+	<definition name="stnLooseConversion" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Conversion" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnLooseConversion.jsp" />
+		<put-attribute name="view" value="stnLooseConversion" />
+	</definition>
+	
+	
+		<!--looseStnConversionPickup -->
+	<definition name="looseStnConversionPickup" extends="container">
+		<put-attribute name="title" value="Loose Stone Conversion Pickup" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/looseStnConversionPickup.jsp" />
+		<put-attribute name="view" value="aeOrderFilter" />
+	</definition>
+	
+	
+	<!-- stnLooseRetMt -->
+	<definition name="stnLooseRetMt" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Return Listing" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/stnLooseRetMt.jsp" />
+		<put-attribute name="view" value="stoneInwardRetMt" />
+	</definition>
+	
+	
+	 <definition name="stnLooseRetMt/add" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Loose Stone Return" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/transactions/addStnLooseRetMt.jsp" />
+		<put-attribute name="view" value="aeStoneInwardRetMt" />
+	</definition>
+	
+	<!--dashboard -->
+	<definition name="dashboard" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Dashboard" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/dashboard.jsp" />
+		<put-attribute name="view" value="dashboard" />
+	</definition>
+	
+	<definition name="dashboardFilter" extends="container">
+		<put-attribute name="title"
+			value="Jewelplus - Dashboard Filter" />
+		<put-attribute name="body"
+			value="/WEB-INF/jsp/manufacturing/masters/dashboardFilters.jsp" />
+		<put-attribute name="view" value="dashboardFilter" />
+	</definition>
+	
+
+</tiles-definitions>

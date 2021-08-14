@@ -1,0 +1,136 @@
+package com.jiyasoft.jewelplus.domain.manufacturing.masters;
+
+import java.util.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+import com.jiyasoft.jewelplus.domain.admin.User;
+
+@Entity
+@Table(name = "locationright")
+public class LocationRights {
+
+	@Id
+	@GeneratedValue
+	@Column(name = "UserDeptTrfId")
+	private Integer id;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "UserId", referencedColumnName = "id")
+	private User user;
+
+	@ManyToOne(fetch = FetchType.LAZY)
+	@JoinColumn(name = "DeptId")
+	private Department department;
+
+
+	@Column(name = "CreatedBy", updatable = false)
+	private String createdBy;
+
+	@Column(name = "CreatedDt", updatable = false)
+	private Date createdDt;
+
+	@Column(name = "ModiBy", insertable = false)
+	private String modiBy;
+
+	@Column(name = "ModiDt", insertable = false)
+	private Date modiDt;
+
+	@Column(name = "Deactive")
+	private Boolean deactive = false;
+	
+	@Column(name = "DefaultFlg")
+	private Boolean defaultFlg = false;
+
+	@Column(name = "DeactiveDt")
+	private Date deactiveDt;
+
+	public Integer getId() {
+		return id;
+	}
+
+	public void setId(Integer id) {
+		this.id = id;
+	}
+
+	public User getUser() {
+		return user;
+	}
+
+	public void setUser(User user) {
+		this.user = user;
+	}
+
+	public Department getDepartment() {
+		return department;
+	}
+
+	public void setDepartment(Department department) {
+		this.department = department;
+	}
+
+	public String getCreatedBy() {
+		return createdBy;
+	}
+
+	public void setCreatedBy(String createdBy) {
+		this.createdBy = createdBy;
+	}
+
+	public Date getCreatedDt() {
+		return createdDt;
+	}
+
+	public void setCreatedDt(Date createdDt) {
+		this.createdDt = createdDt;
+	}
+
+	public String getModiBy() {
+		return modiBy;
+	}
+
+	public void setModiBy(String modiBy) {
+		this.modiBy = modiBy;
+	}
+
+	public Date getModiDt() {
+		return modiDt;
+	}
+
+	public void setModiDt(Date modiDt) {
+		this.modiDt = modiDt;
+	}
+
+	public Boolean getDeactive() {
+		return deactive;
+	}
+
+	public void setDeactive(Boolean deactive) {
+		this.deactive = deactive;
+	}
+
+	public Date getDeactiveDt() {
+		return deactiveDt;
+	}
+
+	public void setDeactiveDt(Date deactiveDt) {
+		this.deactiveDt = deactiveDt;
+	}
+
+	public Boolean getDefaultFlg() {
+		return defaultFlg;
+	}
+
+	public void setDefaultFlg(Boolean defaultFlg) {
+		this.defaultFlg = defaultFlg;
+	}
+
+	
+}

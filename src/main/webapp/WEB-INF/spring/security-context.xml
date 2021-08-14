@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans:beans xmlns="http://www.springframework.org/schema/security"
+	xmlns:beans="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+                        http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.2.xsd">
+
+	<http use-expressions="true">
+		<intercept-url pattern="/admin/**" access="hasAnyRole('ROLE_USER','ROLE_ADMIN')"/>
+		<intercept-url pattern="/manufacturing/**" access="hasRole('ROLE_USER')"/>
+		<form-login login-page="/secure/login.html"
+			default-target-url="/secure/loginDefault.html" username-parameter="username" password-parameter="password" 
+			authentication-failure-url = "/secure/loginFailedSession.html" />
+		<logout logout-url="/logout" logout-success-url="/secure/login.html" invalidate-session="true" delete-cookies="JSESSIONID"/>
+	</http>
+
+	<authentication-manager>
+		<authentication-provider>
+			<password-encoder hash="bcrypt" />
+
+			<jdbc-user-service data-source-ref="dataSource"
+				authorities-by-username-query="select user.name, role.name from user 
+				join user_role on user.id = user_role.users_id
+				join role on user_role.roles_id = role.id
+				where user.name = ?"
+
+				users-by-username-query="select name, password, 1 as enabled from user where name = ?" />
+		</authentication-provider>
+	</authentication-manager>
+	
+</beans:beans>
