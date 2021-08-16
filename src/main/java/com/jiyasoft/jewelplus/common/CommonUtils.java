@@ -10,6 +10,7 @@ import javax.mail.internet.InternetAddress;
 
 public class CommonUtils {
 	
+	
 	public static boolean isValidEmailAddress(String email) {
 		   boolean result = true;
 		   try {
